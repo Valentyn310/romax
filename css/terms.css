@@ -1,0 +1,158 @@
+/* terms START */
+.terms__section {
+
+}
+
+.subtitle {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.subtitle__right {
+    width: 50%;
+}
+
+.terms__card {
+    
+}
+
+.terms__items {
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.terms__num {
+    text-align: center;
+    margin-right: 10px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.terms__items p span {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .subtitle__right {
+        width: 100%;
+    }
+
+    .terms__info {
+        align-content: flex-end !important;
+    }
+}
+@media screen and (max-width: 480px) {
+    .terms__items p {
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .terms__items p span {
+        font-size: 18px;
+    }
+}
+
+/* terms END */
+
+/* form contact */
+.cont__section {
+    margin-top: 110px;
+}
+
+.cont__form {
+    
+}
+
+.cont__form__title h3{
+    padding-bottom: 10px;
+}
+
+
+.form-control {
+    display: flex;
+    max-width: 250px;    
+    margin: 30px auto;
+    padding: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .cont__info {
+        align-content: flex-end !important;
+    }
+}
+@media screen and (max-width: 480px) {}
+
+/* form contact END */
+
+/* about START */
+
+.about__card {
+    border: none;
+    padding: 20px !important;
+}
+
+.about__btn {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+
+    margin-top: 50px;
+
+}
+
+@media screen and (max-width: 768px) {
+    .about__info {
+        align-content: center !important;
+    }
+}
+@media screen and (max-width: 480px) {}
+/* about END */
+
+/* wishes */
+
+.wishes__subtitle {
+    width: 50%;
+    text-align: center;
+    padding: 25px 0;
+}
+.wishes__foto {
+    background-image: url(/img/wishes.png) !important;
+}
+
+.wishes__card {
+    padding: 20px !important;
+}
+
+@media screen and (max-width: 768px) {
+    .wishes__subtitle {
+        width: 100%;
+    }
+
+    .wishes__card {
+       background-color: #1f1f1f;
+    }
+
+    .wishes__bg {
+        background-image: url(/img/wishes.png) !important;
+    }
+
+
+}
+/* wishes */
+
+  
+ 
+ 
+  
+  
+  
+
