@@ -9,9 +9,22 @@ menuBtn.addEventListener('click', function () {
     manuOpened.classList.toggle('active');
 })
 
+let links = document.querySelectorAll('.mob__hov');
+
+
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        menuBtn.classList.toggle('active');
+        menu.classList.toggle('active');
+        manuOpened.classList.toggle('active');
+    })
+});
+
+
 // mobile menu END
-
-
+document.querySelectorAll('.title').forEach( item => {
+    console.log(item);
+})
 
 
 
@@ -103,10 +116,52 @@ price();
 
 setInterval(price,30000);
 
+// coll
 
 
+// form btn
+let formClos = document.querySelector('.form__btn');
+let formContainer = document.querySelector('.form__container')
 
-// revies
+let card1 = document.querySelector('.card1__btn')
 
-// Slick slider init
+card1.addEventListener('click', function() {
+    // formContainer.style.display = 'block'
+    // formContainer.style.transform = 'scale(1)';
+    formContainer.classList.add('active');
+})
 
+formClos.addEventListener('click', function () {
+//    formContainer.style.display = 'none'
+   formContainer.classList.remove('active');
+})
+
+// form
+
+// form end
+
+// scrool midle
+// const anchors = document.querySelectorAll('a[href*="#"]')
+
+// for (let anchor of anchors) {
+//   anchor.addEventListener('click', function (e) {
+//     e.preventDefault()
+    
+//     const blockID = anchor.getAttribute('href').substr(1)
+    
+//     document.getElementById(blockID).scrollIntoView({
+//       behavior: 'smooth',
+//       block: 'start'
+//     })
+//   })
+// }
+// scrool midleEND
+
+// window.onload
+
+window.onload = function() {
+    let preloader = document.getElementById('loader-wrapper');
+    // preloader.classList.add('visible');
+    preloader.classList.add('hidden'), 400
+
+}

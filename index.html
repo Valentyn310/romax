@@ -28,6 +28,95 @@
 </head>
 
 <body class="manuOpened">
+
+    <style>
+        .loader-wrapper {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999999;
+            position: fixed;
+            background-color: white;
+
+            transition: 0.6s;
+        }
+
+        .load-container {
+            position: relative;
+            display: inline-block;
+            width: 130px;
+            height: 130px;
+            overflow: hidden;
+            letter-spacing: normal;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .linespinner {
+            width: 10px;
+            height: 30px;
+            background: black;
+            position: relative;
+            animation: linespinner 1s ease-in-out infinite;
+            animation-delay: 0.4s;
+            border-radius: 8px;
+        }
+
+        .linespinner:after,
+        .linespinner:before {
+            border-radius: 8px;
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            background: black;
+            animation: linespinner 1s ease-in-out infinite;
+        }
+
+        .linespinner:before {
+            right: 18px;
+            animation-delay: 0.15s;
+        }
+
+        .linespinner:after {
+            left: 18px;
+            animation-delay: 0.6s;
+        }
+
+        @keyframes linespinner {
+
+            0%,
+            100% {
+                background-color: black;
+                box-shadow: 0 0 0 black, 0 0 0 black;
+            }
+
+            50% {
+                background-color: black;
+                box-shadow: 0 -15px 0 black, 0 15px 0 black;
+            }
+        }
+
+        .hidden {
+            visibility: hidden;
+            transform: translateY(-100%);
+        }
+
+        .visible {
+            visibility: visible;
+        }
+    </style>
+
+    <div id="loader-wrapper" class="loader-wrapper">
+        <div class="load-container">
+            <div class="linespinner"></div>
+        </div>
+    </div>
+
     <!-- header -->
     <header class="header">
         <div class="container">
@@ -35,12 +124,12 @@
                 <a href="#"><img src="./img/logo.png" alt=""></a>
                 <nav class="header__nav">
                     <ul class="nav__list">
-                        <li class="head__link"><a href="#">Главная</a></li>
-                        <li class="head__link"><a href="#">Каталог</a></li>
+                        <li class="head__link"><a href="#hero">Главная</a></li>
+                        <li class="head__link"><a href="#collection">Каталог</a></li>
                         </li>
-                        <li class="head__link"><a href="#">Доставка</a></li>
+                        <li class="head__link"><a href="#deliveri">Доставка</a></li>
                         </li>
-                        <li class="head__link"><a href="#">О нас</a></li>
+                        <li class="head__link"><a href="#about">О нас</a></li>
                         </li>
                     </ul>
                 </nav>
@@ -75,10 +164,10 @@
         <div class="mob__nav">
             <nav class="">
                 <ul>
-                    <li><a class="mob__hov" href="#">Главная</a></li>
-                    <li><a class="mob__hov" href="#">Каталог</a></li>
-                    <li><a class="mob__hov" href="#">Доставка</a></li>
-                    <li><a class="mob__hov" href="#">о Нас</a></li>
+                    <li><a class="mob__hov" href="#hero">Главная</a></li>
+                    <li><a class="mob__hov" href="#collection">Каталог</a></li>
+                    <li><a class="mob__hov" href="#deliveri">Доставка</a></li>
+                    <li><a class="mob__hov" href="#about">о Нас</a></li>
                 </ul>
             </nav>
             <div class="mob__contact">
@@ -100,7 +189,7 @@
     <!-- header END -->
 
     <!-- HERO START -->
-    <section>
+    <section id="hero">
         <div id="hero__bg" class="container hero__cotainer">
             <div class="hero__inner">
 
@@ -117,7 +206,7 @@
                         <span class="hero__fin">ОТ 450ГРН</span>
                     </p>
                     <div class="line hero__line"></div>
-                    <a href=""><button class="button">Каталог</button></a>
+                    <a href="#collection"><button class="button">Каталог</button></a>
 
 
                 </div>
@@ -133,7 +222,7 @@
     <!-- colection -->
 
 
-    <section>
+    <section id="collection">
         <div class="container col_cont">
             <div class="col__left">
 
@@ -174,7 +263,7 @@
                                     </div>
                                 </div>
 
-                                <a href="#"><button class="button">Заказать</button></a>
+                                <a href="#"><button class="button card1__btn">Заказать</button></a>
                             </div><!--/card1 -->
                         </div>
                         <div class="swiper-slide slide2">
@@ -282,7 +371,7 @@
 
     <!-- deliveri START -->
 
-    <section class="del__section">
+    <section class="del__section" id="deliveri">
         <div class="container del__container">
             <div class="title">
                 <h1>ДОСТАВКА</h1>
@@ -327,7 +416,7 @@
 
     <!-- deliveri END -->
     <!-- terms START -->
-    <section class="del__section">
+    <section class="del__section" id="terms">
         <div class="container del__container">
             <div class="subtitle">
                 <div class="title subtitle__right">
@@ -368,7 +457,7 @@
                                     Вы производите оплату через курьера, наложенным платежом или на карту ФОП
                                 </p>
                             </div>
-                            <a href="#"><button class="button">Заказать</button></a>
+                            <a href="#collection"><button class="button">Заказать</button></a>
 
                         </div>
                     </div>
@@ -380,7 +469,7 @@
     <!-- terms END -->
 
     <!-- contact Form start-->
-    <section class="cont__section">
+    <section class="cont__section" id="contact__form">
         <div class="container del__container">
             <div class="del__inner">
                 <div class="del__info1">
@@ -416,7 +505,7 @@
 
     <!-- about START -->
 
-    <section class="del__section">
+    <section class="del__section" id="about">
         <div class="container del__container">
             <div class="subtitle">
                 <div class="title subtitle__right">
@@ -434,7 +523,7 @@
                                 компания по производству классической одежды. Работаем по всей Украине, странам Европы,
                                 Турции. </p>
 
-                            <a href="#"><button class="button about__btn">посмотреть коллекцию</button></a>
+                            <a href="#collection"><button class="button about__btn">посмотреть коллекцию</button></a>
 
                         </div>
                     </div>
@@ -445,7 +534,7 @@
     <!-- about END -->
 
     <!-- revies START -->
-    <section class="del__section">
+    <section class="del__section" id="revis">
         <div class="container rev__container">
             <div class="title">
                 <h1>ОТЗЫВЫ</h1>
@@ -526,7 +615,7 @@
                 <div class="fut__item">
                     <h2>Обратный звонок</h2>
                     <div class="line fut__line"></div>
-                    <a href=""><button class="button fut__button">Каталог</button></a>
+                    <a href="#contact__form"><button class="button fut__button">Заказать звонок</button></a>
                 </div>
 
             </div>
@@ -536,10 +625,25 @@
 
     <div class="form__container">
         <div class="form__inner">
-            <div class="form__img">sdfsfsdf</div>
+            <div class="form__img">
+                <img src="./img/form/form1.png" alt="">
+                <img src="./img/form/form1.png" alt="">
+                <img src="./img/form/form1.png" alt="">
+                <img src="./img/form/form1.png" alt="">
+            </div>
             <div class="form__cont1">
                 <div class="form__cont">
-                    <form class="form" action="">
+                    <div class="form__top">
+                        <div class="form__btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+
+
+                    <!-- <form class="form" action="">
                         <h2>Заявка на покупку</h2>
                         <p>Наш менеджер свяжется с вами в ближайшее время</p>
 
@@ -548,22 +652,66 @@
                             <input class="form__name" type="text" name="number" placeholder="Номер телефона">
                             <div class="input__centr">
                                 <input class="form__name1" type="number" placeholder="Количество">
-                                
+
                                 <select class="form__name1" id="education">
                                     <option value="secondary">58</option>
-                                    
+
                                     <option value="secondary vocational">56</option>
-                                    
+
                                     <option value="higher" selected>54</option>
 
                                     <option value="incomplete" selected>Размер</option>
 
-                                  </select>
+                                </select>
                             </div>
                             <input class="form__name" type="text" name="coment" placeholder="Комментарий">
                         </div>
                         <a href=""><button class="button">Заказать</button></a>
+                    </form> -->
+
+                    <form id="form-contact" method="POST" class="contact-form" autocomplete="off"
+                        enctype="multipart/form-data">
+                        <!-- <button class="btn1">
+                          закрыть
+                        </button> -->
+                        <p class="contact-form__title">Закажите обратный звонок и наш консультант свяжется с вами</p>
+                        <div class="preloader"></div>
+                        <p class="contact-form__message"></p>
+
+                        <!-- Поле с именем -->
+                        <div class="contact-form__input-wrapper contact-form__input-wrapper_name">
+                            <input name="name" type="text" class="contact-form__input contact-form__input_name"
+                                placeholder="Введите ваше имя">
+                        </div>
+
+                        <!-- Поле с телефоном -->
+                        <div class="contact-form__input-wrapper contact-form__input-wrapper_phone">
+                            <input name="phone" type="tel" class="contact-form__input contact-form__input_phone"
+                                placeholder="Введите ваш телефон">
+                        </div>
+
+                        <!-- Поле с выбором файла -->
+                        <!-- <div class="contact-form__input-wrapper">
+                          <input type="file" name="files[]" id="contact-form__input_file"
+                                 class="contact-form__input contact-form__input_file" multiple>
+                          <label for="contact-form__input_file" class="contact-form__file-button">
+                            <span class="contact-form__file-text">Выберите файл</span>
+                          </label>
+                        </div> -->
+
+                        <!--Поле с темой в письме-->
+                        <input name="theme" type="hidden" class="contact-form__input contact-form__input_theme"
+                            value="заявка с сайта Smartlanding.biz">
+
+                        <!--Кнопка отправки формы-->
+                        <button type="submit" class="contact-form__button">Отправить</button>
+
                     </form>
+
+
+
+
+
                 </div>
             </div>
         </div>
@@ -571,6 +719,42 @@
 
 
 
+    <!-- form__telegramm -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/telegramform/js/telegramform.js"></script>
+
+    <script>
+
+        // Кастомизация поля с файлом. Подробнее тут: https://smartlanding.biz/stilizaciya-input-type-file.html
+        let inputs = document.querySelectorAll('.contact-form__input_file');
+        Array.prototype.forEach.call(inputs, function (input) {
+            let label = input.nextElementSibling,
+                labelVal = label.querySelector('.contact-form__file-text').innerText;
+
+            input.addEventListener('change', function (e) {
+                let countFiles = '';
+                if (this.files && this.files.length >= 1)
+                    countFiles = this.files.length;
+
+                if (countFiles)
+                    label.querySelector('.contact-form__file-text').innerText = 'Выбрано файлов: ' + countFiles;
+                else
+                    label.querySelector('.contact-form__file-text').innerText = labelVal;
+            });
+        });
+
+    </script>
+
+
+
+
+    <!-- Маска ввода номера телефона. Подробнее тут: https://smartlanding.biz/maski-vvoda-telefona.html -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script>
+        $(function () {
+            $('input[type="tel"]').mask('+38(000)000-00-00');
+        });
+    </script>
     <!-- js -->
     <script src="./js/main.js"></script>
     <!-- Swiper JS -->
@@ -589,8 +773,6 @@
             },
         });
     </script>
-
-
 
 </body>
 
