@@ -77,6 +77,7 @@ li {}
 
 .container {
     width: 100%;
+    margin-top: 100px;
 
 
 }
@@ -598,6 +599,7 @@ input::placeholder {
 /* footer start*/
 footer {
     width: 100%;
+    margin-bottom: 150px;
 }
 
 .fut__cont {
