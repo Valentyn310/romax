@@ -1237,13 +1237,11 @@ p {
         margin: 0 auto;
         width: auto; */
         justify-content: space-between !important;
-        /* max-width: 271px; */
+        max-width: 271px;
         /* width: 100%; */
     }
 
-    #form-contact {
-        max-width: 271px;
-    }
+
 
     .contact-form__input_name {
         width: auto;
