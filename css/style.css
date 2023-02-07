@@ -155,8 +155,7 @@ input::placeholder {
 
 @media screen and (max-width: 480px) {
     input {
-        padding: 10px;
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 
@@ -1241,25 +1240,28 @@ p {
 
     .contact-form__input_name {
         width: auto;
+        height: 30px;
     }
 
     .contact-form__input_phone {
         width: auto;
+        height: 30px;
     }
 
     .contact-form__input_col {
         width: auto;
-
+        height: 30px;
     }
 
     .contact-form__input_size {
         width: 72%;
-
+        height: 30px;
 
     }
 
     .contact-form__input_coment {
         width: auto;
+        height: 30px;
     }
 
     .contact-form {
