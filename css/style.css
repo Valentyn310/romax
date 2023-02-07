@@ -1238,6 +1238,7 @@ p {
         width: auto; */
         justify-content: space-between !important;
         width: 100%;
+        margin: 0;
     }
 
 
