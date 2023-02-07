@@ -1231,37 +1231,42 @@ p {
     }
 
     .form__line {
-        /* flex-wrap: wrap;
-        justify-content: center; */
-        display: block;
+        /* display: block;
         margin: 0 auto;
-        width: auto;
+        width: auto; */
+        justify-content: space-between;
+        max-width: 271px;
     }
 
     .contact-form__input_name {
         width: auto;
-        height: 30px;
+        height: 35px;
+        background-size: 25px;
     }
 
     .contact-form__input_phone {
         width: auto;
-        height: 30px;
+        height: 35px;
+        background-size: 25px;
     }
 
     .contact-form__input_col {
         width: auto;
-        height: 30px;
+        max-width: 60px;
+        height: 35px;
+        background-size: 25px;
     }
 
     .contact-form__input_size {
-        width: 72%;
-        height: 30px;
-
+        width: auto;
+        height: 35px;
+        background-size: 25px;
     }
 
     .contact-form__input_coment {
         width: auto;
-        height: 30px;
+        height: 35px;
+        background-size: 25px;
     }
 
     .contact-form {
