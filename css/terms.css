@@ -80,7 +80,20 @@
     display: flex;
     max-width: 250px;    
     margin: 30px auto;
-    padding: 20px;
+    padding: 20px 45px;
+    
+}
+
+.form-name {
+    background: url(/img/name_icon.png) center left 15px no-repeat #1f1f1f;
+}
+
+.form-phone {
+    background: url(/img/phone_icon.png) center left 15px no-repeat #1f1f1f;
+}
+
+.form-comment {
+    background: url(/img/coment_icon.png) center left 15px no-repeat #1f1f1f;
 }
 
 

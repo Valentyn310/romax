@@ -483,12 +483,13 @@
                                 <p>Наш менеджер свяжется с вами в ближайшее время</p>
                             </div>
 
-                            <input type="text" class="form-control" name="username" placeholder="Имя" required="" />
-
-                            <input type="text" class="form-control" name="number" placeholder="Номер телефона"
+                            <input type="text" class="form-control form-name" name="username" placeholder="Имя"
                                 required="" />
 
-                            <input type="text" class="form-control" name="coment" placeholder="Ваш вопрос"
+                            <input type="text" class="form-control form-phone" name="number"
+                                placeholder="Номер телефона" required="" />
+
+                            <input type="text" class="form-control form-comment" name="coment" placeholder="Комментарий"
                                 required="" />
 
                             <button class="button col__button">Отправить</button>
@@ -624,26 +625,36 @@
     </footer>
 
     <div class="form__container">
-        <div class="form__inner">
-            <div class="form__img">
-                <img src="./img/form/form1.png" alt="">
-                <img src="./img/form/form1.png" alt="">
-                <img src="./img/form/form1.png" alt="">
-                <img src="./img/form/form1.png" alt="">
+        <div class="form__inner1">
+            <div class="form__top">
+                <div class="form__btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <div class="form__cont1">
-                <div class="form__cont">
-                    <div class="form__top">
-                        <div class="form__btn">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+            <div class="form__inner">
+                <div class="form__img">
+                    <div class="form__img-content">
+                        <div class="form__img-content1">
+                            <img src="./img/form/form1.png" alt="">
+                            <img src="./img/form/form1.png" alt="">
                         </div>
+                        <div class="form__img-content1">
+                            <img src="./img/form/form1.png" alt="">
+                            <img src="./img/form/form1.png" alt="">
+                        </div>
+
+
                     </div>
+                </div>
+                <div class="form__cont1">
+                    <div class="form__cont">
 
 
 
-                    <!-- <form class="form" action="">
+
+                        <!-- <form class="form" action="">
                         <h2>Заявка на покупку</h2>
                         <p>Наш менеджер свяжется с вами в ближайшее время</p>
 
@@ -669,29 +680,57 @@
                         <a href=""><button class="button">Заказать</button></a>
                     </form> -->
 
-                    <form id="form-contact" method="POST" class="contact-form" autocomplete="off"
-                        enctype="multipart/form-data">
-                        <!-- <button class="btn1">
+                        <form id="form-contact" method="POST" class="contact-form" autocomplete="off"
+                            enctype="multipart/form-data">
+                            <!-- <button class="btn1">
                           закрыть
                         </button> -->
-                        <p class="contact-form__title">Закажите обратный звонок и наш консультант свяжется с вами</p>
-                        <div class="preloader"></div>
-                        <p class="contact-form__message"></p>
+                            <p class="contact-form__title">Закажите обратный звонок и наш консультант свяжется с вами
+                            </p>
+                            <div class="preloader"></div>
+                            <p class="contact-form__message"></p>
 
-                        <!-- Поле с именем -->
-                        <div class="contact-form__input-wrapper contact-form__input-wrapper_name">
-                            <input name="name" type="text" class="contact-form__input contact-form__input_name"
-                                placeholder="Введите ваше имя">
-                        </div>
+                            <!-- Поле с именем -->
+                            <div class="contact-form__input-wrapper contact-form__input-wrapper_name">
+                                <input name="name" type="text" class="contact-form__input contact-form__input_name"
+                                    placeholder="Введите ваше имя">
+                            </div>
 
-                        <!-- Поле с телефоном -->
-                        <div class="contact-form__input-wrapper contact-form__input-wrapper_phone">
-                            <input name="phone" type="tel" class="contact-form__input contact-form__input_phone"
-                                placeholder="Введите ваш телефон">
-                        </div>
+                            <!-- Поле с телефоном -->
+                            <div class="contact-form__input-wrapper contact-form__input-wrapper_phone">
+                                <input name="phone" type="tel" class="contact-form__input contact-form__input_phone"
+                                    placeholder="Введите ваш телефон">
+                            </div>
 
-                        <!-- Поле с выбором файла -->
-                        <!-- <div class="contact-form__input-wrapper">
+                            <div class="form__line">
+                                <!-- Поле КОЛИЧЕСТВО -->
+                                <div class="contact-form__input-wrapper contact-form__input-wrapper_phone">
+
+                                    <input name="quantity" type="number"
+                                        class="contact-form__input contact-form__input_col" placeholder="Шт">
+
+                                </div>
+
+                                <!-- Поле РАЗМЕР -->
+                                <div class="contact-form__input-wrapper contact-form__input-wrapper_phone">
+
+                                    <input name="size" type="number"
+                                        class="contact-form__input contact-form__input_size" placeholder="Размер"
+                                        min="54" max="56">
+
+                                </div>
+                            </div>
+
+                            <!-- Поле coment -->
+                            <div class="contact-form__input-wrapper contact-form__input-wrapper_phone">
+
+                                <input name="coment" type="text" class="contact-form__input contact-form__input_coment"
+                                    placeholder="Комментарий">
+
+                            </div>
+
+                            <!-- Поле с выбором файла -->
+                            <!-- <div class="contact-form__input-wrapper">
                           <input type="file" name="files[]" id="contact-form__input_file"
                                  class="contact-form__input contact-form__input_file" multiple>
                           <label for="contact-form__input_file" class="contact-form__file-button">
@@ -699,19 +738,19 @@
                           </label>
                         </div> -->
 
-                        <!--Поле с темой в письме-->
-                        <input name="theme" type="hidden" class="contact-form__input contact-form__input_theme"
-                            value="заявка с сайта Smartlanding.biz">
+                            <!--Поле с темой в письме-->
+                            <input name="theme" type="hidden" class="contact-form__input contact-form__input_theme"
+                                value="заявка с сайта Smartlanding.biz">
 
-                        <!--Кнопка отправки формы-->
-                        <button type="submit" class="contact-form__button">Отправить</button>
+                            <!--Кнопка отправки формы-->
+                            <button type="submit" class="contact-form__button">Отправить</button>
 
-                    </form>
-
-
+                        </form>
 
 
 
+
+                    </div>
                 </div>
             </div>
         </div>
