@@ -224,11 +224,11 @@
 
     <section id="collection">
         <div class="container col_cont">
-            <div class="col__left">
+            <div class="col__left col-bg">
 
             </div>
 
-            <div class="col__right">
+            <div id="col__right" class="col__right">
                 <div class="title">
                     <h1>СЕЗОН 2023</h1>
                     <div class="line"></div>
@@ -475,7 +475,7 @@
                 <div class="del__info1">
                     <div class="del__info cont__info">
 
-                        <form class="del__card cont__form" action="">
+                        <form id="form-contact" method="POST" class=" contact-form del__card cont__form" action="">
                             <div class="cont__form__title">
                                 <h3>Заказать обратный
                                     звонок</h3>
@@ -483,16 +483,19 @@
                                 <p>Наш менеджер свяжется с вами в ближайшее время</p>
                             </div>
 
-                            <input type="text" class="form-control form-name" name="username" placeholder="Имя"
+                            <input type="text" class="form-control form-name" name="name" placeholder="Имя"
                                 required="" />
 
-                            <input type="text" class="form-control form-phone" name="number"
+                            <input type="tel" class="form-control form-phone" name="phone"
                                 placeholder="Номер телефона" required="" />
 
-                            <input type="text" class="form-control form-comment" name="coment" placeholder="Комментарий"
+                            <input type="text" class="form-control form-comment" name="coment1" placeholder="Комментарий"
                                 required="" />
 
-                            <button class="button col__button">Отправить</button>
+                            <input name="theme" type="hidden" class="contact-form__input contact-form__input_theme"
+                                value="Тип: перезвонить!">
+
+                            <button type="submit" class="contact-form__button button col__button">Отправить</button>
                         </form>
 
 
@@ -535,7 +538,7 @@
     <!-- about END -->
 
     <!-- revies START -->
-    <section class="del__section" id="revis">
+    <!-- <section class="del__section" id="revis">
         <div class="container rev__container">
             <div class="title">
                 <h1>ОТЗЫВЫ</h1>
@@ -550,7 +553,7 @@
         </div>
 
 
-    </section>
+    </section> -->
     <!-- revies END -->
 
     <!-- wishes START -->
@@ -652,7 +655,7 @@
                     <div class="form__cont">
 
 
-                        <form id="form-contact" method="POST" class="contact-form" autocomplete="off"
+                        <form id="form-contact" method="POST" class="contact-form contact__form-style" autocomplete="off"
                             enctype="multipart/form-data">
                             <!-- <button class="btn1">
                           закрыть
@@ -679,7 +682,7 @@
                                 <div class="contact-form__input-wrapper_phone">
 
                                     <input name="quantity" type="number"
-                                        class="contact-form__input contact-form__input_col" placeholder="Шт">
+                                        class="contact-form__input contact-form__input_col" placeholder="Шт" min="1">
 
                                 </div>
 
@@ -712,7 +715,7 @@
 
                             <!--Поле с темой в письме-->
                             <input name="theme" type="hidden" class="contact-form__input contact-form__input_theme"
-                                value="заявка с сайта Smartlanding.biz">
+                                value="заявка Card1">
 
                             <!--Кнопка отправки формы-->
                             <button type="submit" class="contact-form__button">Отправить</button>

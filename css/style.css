@@ -852,7 +852,11 @@ p {
 
 /* form jqery */
 .contact-form {
-    width: 100%;
+    
+}
+
+.contact__form-style {
+    width: 90%;
     max-width: 400px;
     padding: 20px;
     background: #1c1e21;
@@ -1187,23 +1191,23 @@ p {
     }
 
     .contact-form__input_name {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     .contact-form__input_phone {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     .contact-form__input_col {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     .contact-form__input_size {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     .contact-form__input_coment {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     .contact-form {

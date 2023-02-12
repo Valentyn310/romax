@@ -22,7 +22,7 @@ links.forEach(link => {
 
 
 // mobile menu END
-document.querySelectorAll('.title').forEach( item => {
+document.querySelectorAll('.title').forEach(item => {
     console.log(item);
 })
 
@@ -59,9 +59,27 @@ setInterval(sas, 15000);
 // hero END
 
 
+
+
+
+// add class col-bg
+let colRigh = document.getElementById("col__right")
+
+function nalevo() {
+    if (window.outerWidth < 780) {
+        colRigh.classList("col__bg");
+        console.log(1);
+    } else {
+        console.log(2);
+    };
+}
+
+nalevo()
+
+
 // swiper col Start
 
-let colLeft = document.querySelector(".col__left");
+let colLeft = document.querySelector(".col-bg");
 let slideActiv = document.querySelector(".swiper-slide-active");
 
 let slide1 = document.querySelector(".slide1");
@@ -83,11 +101,11 @@ function colBg() {
     else if (slide4.classList.contains("swiper-slide-active")) {
         colLeft.style.backgroundImage = "url('/img/hero/hero.png')";
     }
-    else{
-        colLeft.style.backgroundImage = "url('/img/colection/col1.png')"; 
+    else {
+        colLeft.style.backgroundImage = "url('/img/colection/col1.png')";
     }
 
-    
+
 };
 
 setInterval(colBg, 100)
@@ -100,10 +118,10 @@ let num = Number(col);
 
 function price() {
 
-    if (col > 20){
-    newNum = col - 1
-    console.log(newNum);
-    colText.innerHTML = newNum;
+    if (col > 20) {
+        newNum = col - 1
+        console.log(newNum);
+        colText.innerHTML = newNum;
     } else {
         colText.innerHTML = '20';
     }
@@ -114,7 +132,7 @@ function price() {
 
 price();
 
-setInterval(price,30000);
+setInterval(price, 30000);
 
 // coll
 
@@ -125,15 +143,15 @@ let formContainer = document.querySelector('.form__container')
 
 let card1 = document.querySelector('.card1__btn')
 
-card1.addEventListener('click', function() {
+card1.addEventListener('click', function () {
     // formContainer.style.display = 'block'
     // formContainer.style.transform = 'scale(1)';
     formContainer.classList.add('active');
 })
 
 formClos.addEventListener('click', function () {
-//    formContainer.style.display = 'none'
-   formContainer.classList.remove('active');
+    //    formContainer.style.display = 'none'
+    formContainer.classList.remove('active');
 })
 
 // form
@@ -146,9 +164,9 @@ formClos.addEventListener('click', function () {
 // for (let anchor of anchors) {
 //   anchor.addEventListener('click', function (e) {
 //     e.preventDefault()
-    
+
 //     const blockID = anchor.getAttribute('href').substr(1)
-    
+
 //     document.getElementById(blockID).scrollIntoView({
 //       behavior: 'smooth',
 //       block: 'start'
@@ -159,7 +177,7 @@ formClos.addEventListener('click', function () {
 
 // window.onload
 
-window.onload = function() {
+window.onload = function () {
     let preloader = document.getElementById('loader-wrapper');
     // preloader.classList.add('visible');
     preloader.classList.add('hidden'), 400

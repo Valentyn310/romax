@@ -34,6 +34,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['phone']) && !empty($_POST['phone'])) {
         $txt .= "Телефон: " . strip_tags(trim(urlencode($_POST['phone']))) . "%0A";
     }
+
+    // количество
+    if (isset($_POST['quantity']) && !empty($_POST['quantity'])) {
+      $txt .= "Количество: " . strip_tags(trim(urlencode($_POST['quantity']))) . "%0A";
+    }
+
+    // size
+    if (isset($_POST['size']) && !empty($_POST['size'])) {
+      $txt .= "Размер: " . strip_tags(trim(urlencode($_POST['size']))) . "%0A";
+    }
+
+    // size
+    if (isset($_POST['coment']) && !empty($_POST['coment'])) {
+      $txt .= "Комментарий: " . strip_tags(trim(urlencode($_POST['coment']))) . "%0A";
+    }
+
+
+
+
+
+
+
+
+
+    // вторая форма обратной связи
+    // username
+    if (isset($_POST['username']) && !empty($_POST['username'])) {
+      $txt .= "Имя пославшего: " . strip_tags(trim(urlencode($_POST['username']))) . "%0A";
+    }
+
+    // username
+    if (isset($_POST['number']) && !empty($_POST['number'])) {
+      $txt .= "Телефон: " . strip_tags(trim(urlencode($_POST['number']))) . "%0A";
+    }
+
+    // coment
+    if (isset($_POST['coment1']) && !empty($_POST['coment1'])) {
+      $txt .= "Комментарий: " . strip_tags(trim(urlencode($_POST['coment1']))) . "%0A";
+    }
+
+  
     
     // Не забываем про тему сообщения
     if (isset($_POST['theme']) && !empty($_POST['theme'])) {
