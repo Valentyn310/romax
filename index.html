@@ -6,111 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romax</title>
-    <!-- css -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/deliveri.css">
-    <link rel="stylesheet" href="./css/terms.css">
-    <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
         rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <!-- SVIPER -->
-
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" href="/css/swiper.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/terms.css">
 </head>
 
 <body class="manuOpened">
-
-    <style>
-        .loader-wrapper {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 999999;
-            position: fixed;
-            background-color: white;
-
-            transition: 0.6s;
-        }
-
-        .load-container {
-            position: relative;
-            display: inline-block;
-            width: 130px;
-            height: 130px;
-            overflow: hidden;
-            letter-spacing: normal;
-            display: flex;
-            align-content: center;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .linespinner {
-            width: 10px;
-            height: 30px;
-            background: black;
-            position: relative;
-            animation: linespinner 1s ease-in-out infinite;
-            animation-delay: 0.4s;
-            border-radius: 8px;
-        }
-
-        .linespinner:after,
-        .linespinner:before {
-            border-radius: 8px;
-            content: "";
-            position: absolute;
-            width: 10px;
-            height: 30px;
-            background: black;
-            animation: linespinner 1s ease-in-out infinite;
-        }
-
-        .linespinner:before {
-            right: 18px;
-            animation-delay: 0.15s;
-        }
-
-        .linespinner:after {
-            left: 18px;
-            animation-delay: 0.6s;
-        }
-
-        @keyframes linespinner {
-
-            0%,
-            100% {
-                background-color: black;
-                box-shadow: 0 0 0 black, 0 0 0 black;
-            }
-
-            50% {
-                background-color: black;
-                box-shadow: 0 -15px 0 black, 0 15px 0 black;
-            }
-        }
-
-        .hidden {
-            visibility: hidden;
-            transform: translateY(-100%);
-        }
-
-        .visible {
-            visibility: visible;
-        }
-    </style>
-
     <div id="loader-wrapper" class="loader-wrapper">
         <div class="load-container">
             <div class="linespinner"></div>
@@ -121,31 +32,35 @@
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <a href="#"><img src="./img/logo.png" alt=""></a>
+                <a href="/"><img src="./img/logo.png" alt=""></a>
                 <nav class="header__nav">
                     <ul class="nav__list">
-                        <li class="head__link"><a href="#hero">Главная</a></li>
-                        <li class="head__link"><a href="#collection">Каталог</a></li>
-                        </li>
-                        <li class="head__link"><a href="#deliveri">Доставка</a></li>
-                        </li>
-                        <li class="head__link"><a href="#about">О нас</a></li>
-                        </li>
+                        <li class="head__link lng-header1"><a href="#hero">Главная</a></li>
+                        <li class="head__link lng-header2"><a href="#collection">Каталог</a></li>
+                        <li class="head__link lng-header3"><a href="#deliveri">Доставка</a></li>
+                        <li class="head__link lng-header4"><a href="#about">О нас</a></li>
                     </ul>
                 </nav>
                 <div class="header__contact">
-                    <div class="header__lang"><img src="./img/ua.png" alt=""></div>
+
+                    <!-- <div class="header__lang"><img src="./img/ua.png" alt=""></div> -->
+                    <select class="change-lang select">
+                        <option value="ru">ru</option>
+                        <option value="ua">ua</option>
+                    </select>
 
 
-                    <a class="contact__icon" href="#">
+
+
+                    <a class="contact__icon" href="viber:+380731005759">
                         <img class="icon__one" src="./img/social/social_icons1.png" alt="">
                         <img class="icon__hov" src="./img/social/social_icons1.1.png" alt="">
                     </a>
-                    <a class="contact__icon" href="#">
+                    <a class="contact__icon" href="https://t.me/Cherry_Cherry30">
                         <img class="icon__one" src="./img/social/social_icons2.png" alt="">
                         <img class="icon__hov" src="./img/social/social_icons2.2.png" alt="">
                     </a>
-                    <a class="contact__icon" href="#">
+                    <a class="contact__icon" href="tel:+380731005759">
                         <img class="icon__one" src="./img/social/social_icons3.png" alt="">
                         <img class="icon__hov" src="./img/social/social_icons3.3.png" alt="">
                     </a>
@@ -156,30 +71,28 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
     </header>
     <div class="menu">
         <div class="mob__nav">
             <nav class="">
                 <ul>
-                    <li><a class="mob__hov" href="#hero">Главная</a></li>
-                    <li><a class="mob__hov" href="#collection">Каталог</a></li>
-                    <li><a class="mob__hov" href="#deliveri">Доставка</a></li>
-                    <li><a class="mob__hov" href="#about">о Нас</a></li>
+                    <li><a class="mob__hov lng-header11" href="#hero">Главная</a></li>
+                    <li><a class="mob__hov lng-header12" href="#collection">Каталог</a></li>
+                    <li><a class="mob__hov lng-header13" href="#deliveri">Доставка</a></li>
+                    <li><a class="mob__hov lng-header14" href="#about">о Нас</a></li>
                 </ul>
             </nav>
             <div class="mob__contact">
-                <a class="" href="#">
+                <a class="" href="viber:+380731005759">
                     <img class="icon__one" src="./img/social/social_icons1.png" alt="">
                     <img class="icon__hov" src="./img/social/social_icons1.1.png" alt="">
                 </a>
-                <a class="" href="#">
+                <a class="" href="https://t.me/Cherry_Cherry30">
                     <img class="icon__one" src="./img/social/social_icons2.png" alt="">
                     <img class="icon__hov" src="./img/social/social_icons2.2.png" alt="">
                 </a>
-                <a class="" href="#">
+                <a class="" href="tel:+380731005759">
                     <img class="icon__one" src="./img/social/social_icons3.png" alt="">
                     <img class="icon__hov" src="./img/social/social_icons3.3.png" alt="">
                 </a>
@@ -192,63 +105,55 @@
     <section id="hero">
         <div id="hero__bg" class="container hero__cotainer">
             <div class="hero__inner">
-
                 <div class="hero__contant">
                     <div class="hero__title">
                         <img src="./img/Romax.png" alt="">
                     </div>
                     <div class="line line-close"></div>
-
-                    <h2>уникальный дизайн головных <br> уборов для настоящих мужчин со вкусом стиля</h2>
-
+                    <h2 class="">
+                        уникальный дизайн головных <br>
+                        уборов для настоящих мужчин со вкусом стиля
+                    </h2>
                     <p class="hero__price">
-                        <span class="hero__fun"> от 750ГРН</span><br>
-                        <span class="hero__fin">ОТ 450ГРН</span>
+                        <span class="hero__fun"> от 1230ГРН</span><br>
+                        <span class="hero__fin">ОТ 845ГРН</span>
                     </p>
                     <div class="line hero__line"></div>
-                    <a href="#collection"><button class="button">Каталог</button></a>
-
-
+                    <a href="#collection"><button class="button butt__anim">Каталог</button></a>
                 </div>
             </div>
         </div>
-
     </section>
-    <!-- sviper -->
-
     <!-- HERO END -->
 
-
     <!-- colection -->
-
-
     <section id="collection">
         <div class="container col_cont">
-            <div class="col__left col-bg">
-
-            </div>
-
+            <div class="col__left"></div>
             <div id="col__right" class="col__right">
                 <div class="title">
                     <h1>СЕЗОН 2023</h1>
                     <div class="line"></div>
                 </div>
-
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide slide1">
-                            <div class="card"><!-- card1 -->
+
+
+
+
+                        <div class="swiper-slide slide1"><!-- card1 -->
+
+                            <div class="card">
                                 <div class="card__img">
                                     <div class="img__price">
-                                        <span>450грн</span>
-                                        <span>380грн</span>
+                                        <span class="col__fun">1230грн</span>
+                                        <span class="col__fin">845грн</span>
                                     </div>
                                 </div>
-                                <p>выполнена из необычайно прочного маттериала ????????, дополнит шикарный образ
-                                    выполнена из
-                                    необычайно прочного
+                                <p>
+                                    Сделана из высококачественного, прочного турецкого материла, всегда отлично
+                                    дополнит, и разнообразит ваш образ.
                                 </p>
-
                                 <div class="card__price">
 
                                     <div class="card__price__left">
@@ -258,27 +163,27 @@
                                     <div class="card__price__right">
                                         <p>осталось</p>
                                         <p class="price__bg">
-                                            <span class="col"></span> шт
+                                            <span class="col">50</span> шт
                                         </p>
                                     </div>
                                 </div>
-
                                 <a href="#"><button class="button card1__btn">Заказать</button></a>
-                            </div><!--/card1 -->
-                        </div>
-                        <div class="swiper-slide slide2">
-                            <div class="card"><!-- card2 -->
+                            </div>
+                        </div><!--/card1 -->
+
+                        <div class="swiper-slide slide2"><!-- card2 -->
+
+                            <div class="card">
                                 <div class="card__img">
                                     <div class="img__price">
-                                        <span>450грн</span>
-                                        <span>380грн</span>
+                                        <span class="col__fun">1230грн</span>
+                                        <span class="col__fin">845грн</span>
                                     </div>
                                 </div>
-                                <p>выполнена из необычайно прочного маттериала ????????, дополнит шикарный образ
-                                    выполнена из
-                                    необычайно прочного
+                                <p>
+                                    Сделана из высококачественного, прочного турецкого материла, всегда отлично
+                                    дополнит, и разнообразит ваш образ.
                                 </p>
-
                                 <div class="card__price">
 
                                     <div class="card__price__left">
@@ -288,27 +193,27 @@
                                     <div class="card__price__right">
                                         <p>осталось</p>
                                         <p class="price__bg">
-                                            <span class="col">20</span> шт
+                                            <span class="col">50</span> шт
                                         </p>
                                     </div>
                                 </div>
+                                <a href="#"><button class="button card1__btn">Заказать</button></a>
+                            </div>
+                        </div><!--/card2 -->
 
-                                <a href="#"><button class="button">Заказать</button></a>
-                            </div><!--/card2 -->
-                        </div>
-                        <div class="swiper-slide slide3">
-                            <div class="card"><!-- card3 -->
+                        <div class="swiper-slide slide3"><!-- card3 -->
+
+                            <div class="card">
                                 <div class="card__img">
                                     <div class="img__price">
-                                        <span>450грн</span>
-                                        <span>380грн</span>
+                                        <span class="col__fun">1230грн</span>
+                                        <span class="col__fin">845грн</span>
                                     </div>
                                 </div>
-                                <p>выполнена из необычайно прочного маттериала ????????, дополнит шикарный образ
-                                    выполнена из
-                                    необычайно прочного маттериала ????????, дополнит шикарный образ
+                                <p>
+                                    Сделана из высококачественного, прочного турецкого материла, всегда отлично
+                                    дополнит, и разнообразит ваш образ.
                                 </p>
-
                                 <div class="card__price">
 
                                     <div class="card__price__left">
@@ -318,47 +223,104 @@
                                     <div class="card__price__right">
                                         <p>осталось</p>
                                         <p class="price__bg">
-                                            <span class="col">20</span> шт
+                                            <span class="col">50</span> шт
                                         </p>
                                     </div>
                                 </div>
+                                <a href="#"><button class="button card1__btn">Заказать</button></a>
+                            </div>
+                        </div><!--/card3 -->
 
-                                <a href="#"><button class="button">Заказать</button></a>
-                            </div><!--/card3 -->
-                        </div>
-                        <div class="swiper-slide slide4">
-                            <div class="card"><!-- card4 -->
+                        <div class="swiper-slide slide4"><!-- card4 -->
+
+                            <div class="card">
                                 <div class="card__img">
                                     <div class="img__price">
-                                        <span>450грн</span>
-                                        <span>380грн</span>
+                                        <span class="col__fun">1230грн</span>
+                                        <span class="col__fin">845грн</span>
                                     </div>
                                 </div>
-                                <p>выполнена из необычайно прочного маттериала ????????, дополнит шикарный образ
-                                    выполнена из
-                                    необычайно прочного маттериала ????????, дополнит шикарный образ
+                                <p>
+                                    Сделана из высококачественного, прочного турецкого материла, всегда отлично
+                                    дополнит, и разнообразит ваш образ.
                                 </p>
-
                                 <div class="card__price">
 
                                     <div class="card__price__left">
                                         <p>продано</p>
-                                        <p>1280 шт</p>
+                                        <p class="price__bg"><span class="col1"> 1280</span> шт</p>
                                     </div>
                                     <div class="card__price__right">
                                         <p>осталось</p>
-                                        <p>20 шт</p>
+                                        <p class="price__bg">
+                                            <span class="col">50</span> шт
+                                        </p>
                                     </div>
                                 </div>
+                                <a href="#"><button class="button card1__btn">Заказать</button></a>
+                            </div>
+                        </div><!--/card4 -->
 
-                                <a href="#"><button class="button">Заказать</button></a>
-                            </div><!--/card4 -->
-                        </div>
-                        <div class="swiper-slide">Slide 5</div>
-                        <div class="swiper-slide">Slide 6</div>
-                        <div class="swiper-slide">Slide 7</div>
-                        <div class="swiper-slide">Slide 8</div>
-                        <div class="swiper-slide">Slide 9</div>
+                        <div class="swiper-slide slide5"><!-- card5 -->
+
+                            <div class="card">
+                                <div class="card__img">
+                                    <div class="img__price">
+                                        <span class="col__fun">1230грн</span>
+                                        <span class="col__fin">845грн</span>
+                                    </div>
+                                </div>
+                                <p>
+                                    Сделана из высококачественного, прочного турецкого материла, всегда отлично
+                                    дополнит, и разнообразит ваш образ.
+                                </p>
+                                <div class="card__price">
+
+                                    <div class="card__price__left">
+                                        <p>продано</p>
+                                        <p class="price__bg"><span class="col1"> 1280</span> шт</p>
+                                    </div>
+                                    <div class="card__price__right">
+                                        <p>осталось</p>
+                                        <p class="price__bg">
+                                            <span class="col">50</span> шт
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="#"><button class="button card1__btn">Заказать</button></a>
+                            </div>
+                        </div><!--/card5 -->
+
+                        <div class="swiper-slide slide6"><!-- card6 -->
+
+                            <div class="card">
+                                <div class="card__img">
+                                    <div class="img__price">
+                                        <span class="col__fun">1230грн</span>
+                                        <span class="col__fin">845грн</span>
+                                    </div>
+                                </div>
+                                <p>
+                                    Сделана из высококачественного, прочного турецкого материла, всегда отлично
+                                    дополнит, и разнообразит ваш образ.
+                                </p>
+                                <div class="card__price">
+
+                                    <div class="card__price__left">
+                                        <p>продано</p>
+                                        <p class="price__bg"><span class="col1"> 1280</span> шт</p>
+                                    </div>
+                                    <div class="card__price__right">
+                                        <p>осталось</p>
+                                        <p class="price__bg">
+                                            <span class="col">50</span> шт
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="#"><button class="button card1__btn">Заказать</button></a>
+                            </div>
+                        </div><!--/card6 -->
+
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -370,7 +332,6 @@
 
 
     <!-- deliveri START -->
-
     <section class="del__section" id="deliveri">
         <div class="container del__container">
             <div class="title">
@@ -409,12 +370,11 @@
                     </div>
                 </div>
                 <div class="del__foto"></div>
-
             </div>
         </div>
     </section>
-
     <!-- deliveri END -->
+
     <!-- terms START -->
     <section class="del__section" id="terms">
         <div class="container del__container">
@@ -465,7 +425,6 @@
             </div>
         </div>
     </section>
-
     <!-- terms END -->
 
     <!-- contact Form start-->
@@ -475,7 +434,8 @@
                 <div class="del__info1">
                     <div class="del__info cont__info">
 
-                        <form id="form-contact" method="POST" class=" contact-form del__card cont__form" action="">
+                        <form id="form-contact" method="POST" class="del__card back__call contact-form" action="">
+
                             <div class="cont__form__title">
                                 <h3>Заказать обратный
                                     звонок</h3>
@@ -485,20 +445,14 @@
 
                             <input type="text" class="form-control form-name" name="name" placeholder="Имя"
                                 required="" />
-
-                            <input type="tel" class="form-control form-phone" name="phone"
-                                placeholder="Номер телефона" required="" />
-
-                            <input type="text" class="form-control form-comment" name="coment1" placeholder="Комментарий"
+                            <input type="tel" class="form-control form-phone" name="phone" placeholder="Номер телефона"
                                 required="" />
-
+                            <input type="text" class="form-control form-comment" name="coment1"
+                                placeholder="Комментарий" required="" />
                             <input name="theme" type="hidden" class="contact-form__input contact-form__input_theme"
                                 value="Тип: перезвонить!">
-
                             <button type="submit" class="contact-form__button button col__button">Отправить</button>
                         </form>
-
-
                     </div>
                 </div>
                 <div class="del__foto"></div>
@@ -508,7 +462,6 @@
     <!-- contact Form end-->
 
     <!-- about START -->
-
     <section class="del__section" id="about">
         <div class="container del__container">
             <div class="subtitle">
@@ -522,13 +475,13 @@
                 <div class="del__info1">
                     <div class="del__info about__info">
                         <div class="del__card about__card">
-                            <p>Мы Украинская компания с более 25-летней историей, основаная в 1995 году несколькими
-                                энтузиастами, которые смогли добиться успеха в своем деле. Сейчас же мы международная
-                                компания по производству классической одежды. Работаем по всей Украине, странам Европы,
-                                Турции. </p>
-
+                            <p>
+                                Мы специализируемся на создании кепок с модным и лаконичным дизайном. Наш уникальный
+                                стиль - это результат сотрудничества с ведущими дизайн-студиями, которое начинается с
+                                тщательного изучения тенденций, поиска концепции и натуральных материалов и их
+                                дальнейшее гармоничное сочетание.
+                            </p>
                             <a href="#collection"><button class="button about__btn">посмотреть коллекцию</button></a>
-
                         </div>
                     </div>
                 </div>
@@ -538,22 +491,82 @@
     <!-- about END -->
 
     <!-- revies START -->
-    <!-- <section class="del__section" id="revis">
+    <section class="del__section" id="revis">
         <div class="container rev__container">
             <div class="title">
                 <h1>ОТЗЫВЫ</h1>
                 <div class="line"></div>
             </div>
             <div class="rev__inner">
+                <!-- Swiper -->
+                <div class="swiper mySwiper1 rev__swiper">
+                    <div class="swiper-wrapper">
 
-
-
+                        <div class="swiper-slide rev__slide"><!--slide1-->
+                            <div class="rev__img">
+                                <img src="./img/revies/face1.png" alt="">
+                            </div>
+                            <div class="rev__text">
+                                <h3>Наталья</h3>
+                                <p>
+                                    Отличное качество, мягкая и приятная на ощупь кепка. Муж доволен! Посылка пришла быстро! Продавец класс!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide rev__slide"><!--slide2-->
+                            <div class="rev__img">
+                                <img src="./img/revies/face2.png" alt="">
+                            </div>
+                            <div class="rev__text">
+                                <h3>Альмир</h3>
+                                <p>
+                                    Покупкой доволен! Качество очень хорошее, ношу с удовольствием каждый день. Спасибо!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide rev__slide"><!--slide3-->
+                            <div class="rev__img">
+                                <img src="./img/revies/face3.png" alt="">
+                            </div>
+                            <div class="rev__text">
+                                <h3>Александр</h3>
+                                <p>
+                                    Кепкой доволен, удивлен что есть размер на мою большую голову. Всем советую.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide rev__slide"><!--slide4-->
+                            <div class="rev__img">
+                                <img src="./img/revies/face4.png" alt="">
+                            </div>
+                            <div class="rev__text">
+                                <h3>Константин</h3>
+                                <p>
+                                    Кепка отлично дополняет мой образ, не стыдно надеть даже при своей высокой должности!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide rev__slide"><!--slide5-->
+                            <div class="rev__img">
+                                <img src="./img/revies/face5.png" alt="">
+                            </div>
+                            <div class="rev__text">
+                                <h3>Дмитрий</h3>
+                                <p>
+                                    В целом отличный продукт, буду сотрудничать с данной компанией.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
-
+            <div class="swiper__but">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </div>
-
-
-    </section> -->
+    </section>
     <!-- revies END -->
 
     <!-- wishes START -->
@@ -567,9 +580,11 @@
                 <div class="del__info1">
                     <div class="del__info about__info wishes__bg">
                         <div class="del__card wishes__card ">
-                            <p>Незважаючи на всі негаразди, хочемо побажати миру,
+                            <p>
+                                Незважаючи на всі негаразди, хочемо побажати миру,
                                 спокою, тепла. Бережіть себе, віримо в наших захисників
-                                ми обов’язково переможемо! </p>
+                                ми обов’язково переможемо! 
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -585,46 +600,42 @@
                 <div class="fut__item">
                     <h2>О магазине</h2>
                     <div class="line fut__line"></div>
-                    <p>Мы Украинская компания с более 25-летней историей, основаная в 1995 году несколькими
+                    <p>
+                        Мы Украинская компания с более 25-летней историей, основаная в 1995 году несколькими
                         энтузиастами, которые смогли добиться успеха в своем деле. Сейчас же мы международная компания
-                        по производству классической одежды. Работаем по всей Украине, странам Европы, Турции. </p>
+                        по производству классической одежды. Работаем по всей Украине, странам Европы, Турции.
+                    </p>
                 </div>
                 <div class="fut__item">
                     <h2>Контакты</h2>
                     <div class="line fut__line"></div>
-
                     <p>
-                        Адрес: Черновцы ул. Центральна 211
-                        Менеджер: +380666660080
+                        Адрес: Харків вул. Кричевского д. 40
+                        Менеджер: <a class="foot__num" href="tel:+38067597033">+380675970336 Черри</a>
                     </p>
                     <div class="fut__contact">
-                        <a class="" href="#">
+                        <a class="" href="viber:+380731005759">
                             <img class="icon__one" src="./img/social/social_icons1.png" alt="">
                             <img class="icon__hov" src="./img/social/social_icons1.1.png" alt="">
                         </a>
-                        <a class="" href="#">
+                        <a class="" href="https://t.me/Cherry_Cherry30">
                             <img class="icon__one" src="./img/social/social_icons2.png" alt="">
                             <img class="icon__hov" src="./img/social/social_icons2.2.png" alt="">
                         </a>
-                        <a class="" href="#">
+                        <a class="" href="tel:+380731005759">
                             <img class="icon__one" src="./img/social/social_icons3.png" alt="">
                             <img class="icon__hov" src="./img/social/social_icons3.3.png" alt="">
                         </a>
-
                     </div>
-
-                    <a class="fut__logo" href="#"><img src="./img/logo.png" alt=""></a>
-
+                    <a class="fut__logo" href="/"><img src="./img/logo.png" alt=""></a>
                 </div>
                 <div class="fut__item">
                     <h2>Обратный звонок</h2>
                     <div class="line fut__line"></div>
                     <a href="#contact__form"><button class="button fut__button">Заказать звонок</button></a>
                 </div>
-
             </div>
         </div>
-
     </footer>
 
     <div class="form__container">
@@ -647,84 +658,51 @@
                             <img src="./img/form/form1.png" alt="">
                             <img src="./img/form/form1.png" alt="">
                         </div>
-
-
                     </div>
                 </div>
                 <div class="form__cont1">
                     <div class="form__cont">
-
-
-                        <form id="form-contact" method="POST" class="contact-form contact__form-style" autocomplete="off"
-                            enctype="multipart/form-data">
-                            <!-- <button class="btn1">
-                          закрыть
-                        </button> -->
-                            <p class="contact-form__title">Закажите обратный звонок и наш консультант свяжется с вами
+                        <form id="form-contact" method="POST" class="contact-form contact__form-style"
+                            autocomplete="off" enctype="multipart/form-data">
+                            <p class="contact-form__title">
+                                Закажите обратный звонок и наш консультант свяжется с вами
                             </p>
                             <div class="preloader"></div>
                             <p class="contact-form__message"></p>
-
                             <!-- Поле с именем -->
                             <div class="contact-form__input-wrapper_name">
                                 <input name="name" type="text" class="contact-form__input contact-form__input_name"
                                     placeholder="Введите ваше имя">
                             </div>
-
                             <!-- Поле с телефоном -->
                             <div class="contact-form__input-wrapper_phone">
                                 <input name="phone" type="tel" class="contact-form__input contact-form__input_phone"
                                     placeholder="Введите ваш телефон">
                             </div>
-
                             <div class="form__line">
                                 <!-- Поле КОЛИЧЕСТВО -->
                                 <div class="contact-form__input-wrapper_phone">
-
                                     <input name="quantity" type="number"
                                         class="contact-form__input contact-form__input_col" placeholder="Шт" min="1">
-
                                 </div>
-
                                 <!-- Поле РАЗМЕР -->
                                 <div class="contact-form__input-wrapper_phone">
-
                                     <input name="size" type="number"
                                         class="contact-form__input contact-form__input_size" placeholder="Размер"
                                         min="54" max="56">
-
                                 </div>
                             </div>
-
                             <!-- Поле coment -->
                             <div class="contact-form__input-wrapper_phone">
-
                                 <input name="coment" type="text" class="contact-form__input contact-form__input_coment"
                                     placeholder="Комментарий">
-
                             </div>
-
-                            <!-- Поле с выбором файла -->
-                            <!-- <div class="contact-form__input-wrapper">
-                          <input type="file" name="files[]" id="contact-form__input_file"
-                                 class="contact-form__input contact-form__input_file" multiple>
-                          <label for="contact-form__input_file" class="contact-form__file-button">
-                            <span class="contact-form__file-text">Выберите файл</span>
-                          </label>
-                        </div> -->
-
                             <!--Поле с темой в письме-->
                             <input name="theme" type="hidden" class="contact-form__input contact-form__input_theme"
                                 value="заявка Card1">
-
                             <!--Кнопка отправки формы-->
                             <button type="submit" class="contact-form__button">Отправить</button>
-
                         </form>
-
-
-
-
                     </div>
                 </div>
             </div>
@@ -769,23 +747,15 @@
             $('input[type="tel"]').mask('+38(000)000-00-00');
         });
     </script>
-    <!-- js -->
-    <script src="./js/main.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            // slidesPerView: 3,
-            spaceBetween: 40,
 
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + '">' + (index + 1) + "</span>";
-                },
-            },
-        });
+    <!-- js -->
+    <script src="./js/lang.js"></script>
+    <script src="./js/main.js"></script>
+
+    <script>
+
     </script>
 
 </body>
