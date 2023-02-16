@@ -823,6 +823,7 @@ section {
 .univ__content {
     /* display: flex; */
     width: 50%;
+    margin-top: 40px;
 }
 
 .univ__revers {
