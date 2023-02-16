@@ -939,6 +939,10 @@ section {
     background-image: url(/img/colection/col1.png);
 }
 
+.wishes__card {
+    margin-bottom: 70px !important;
+}
+
 @media screen and (max-width: 768px) {
     /* univ */
     .univ__inner {
@@ -964,6 +968,11 @@ section {
 
     .univ__card {
         margin: 0 auto;
+    }
+
+    /* dpopshiping */
+    .drop__img {
+        display: none;
     }
 }
 
@@ -1354,7 +1363,7 @@ section {
     padding: 0;
     width: 100%;
     border: none !important;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 .rev__slide {
@@ -1440,20 +1449,13 @@ section {
     background-image: url(/img/wishes.png) !important;
 }
 
-.wishes__card {
-    padding: 20px !important;
-    border: none;
-}
 
 @media screen and (max-width: 768px) {
     .wishes__subtitle {
         width: 100%;
     }
 
-    .wishes__card {
-        background-color: #1f1f1f;
-        border: 2px solid white;
-    }
+    
 
     .wishes__bg {
         background-image: url(/img/wishes.png) !important;
@@ -1706,7 +1708,7 @@ footer {
 .contact__form-style {
     max-width: 420px;
     padding: 20px;
-    background: #0066ff;
+    /* background: #0066ff; */
     margin: 0 auto;
 }
 
@@ -1733,7 +1735,7 @@ footer {
     background: url("/img/user.svg") center left 15px no-repeat, #1c1e21;
     background-size: 30px;
     
-    padding: 0 15px 0 59px;
+    padding: 0 0 0 59px;
     font: 16px "Roboto", sans-serif;
     color: #fff;
     transition: 0.3s;
@@ -1756,7 +1758,7 @@ footer {
     max-width: 300px;
     background: url("/img/tel.svg") center left 15px no-repeat, #1c1e21;
     background-size: 30px;
-    padding: 0 15px 0 59px;
+    padding: 0 0 0 59px;
     font: 16px "Roboto", sans-serif;
     color: #fff;
     transition: 0.3s;
@@ -1779,7 +1781,7 @@ footer {
     max-width: 300px;
     background: url("/img/col.svg") center left 15px no-repeat, #1c1e21;
     background-size: 30px;
-    padding: 0 15px 0 59px;
+    padding: 0 0 0 59px;
     font: 16px "Roboto", sans-serif;
     color: #fff;
     transition: 0.3s;
@@ -1802,7 +1804,7 @@ footer {
     max-width: 300px;
     background: url("/img/col.svg") center left 15px no-repeat, #1c1e21;
     background-size: 30px;
-    padding: 0 15px 0 59px;
+    padding: 0 0 0 59px;
     font: 16px "Roboto", sans-serif;
     color: #fff;
     transition: 0.3s;
@@ -1825,7 +1827,7 @@ footer {
     max-width: 300px;
     background: url("/img/coment.svg") center left 15px no-repeat, #1c1e21;
     background-size: 30px;
-    padding: 0 15px 0 59px;
+    padding: 0 0 0 59px;
     font: 16px "Roboto", sans-serif;
     color: #fff;
     transition: 0.3s;
@@ -1936,7 +1938,7 @@ footer {
 
     .contact-form__input_size {
         margin-bottom: 10px;
-        width: 200px;
+        width: auto;
     }
 
     .contact-form__input_coment {
