@@ -115,42 +115,42 @@ setInterval(price, 30000);
 // lang start
 
 
-const select = document.querySelector('select');
-const allLang = ['ru', 'ua'];//кол языков
+// const select = document.querySelector('select');
+// const allLang = ['ru', 'ua'];//кол языков
 
-// слушатель собитий
-select.addEventListener('change', changeURLLanguage);
+// // слушатель собитий
+// select.addEventListener('change', changeURLLanguage);
 
-// перенаправить на url с указанием языка
-function changeURLLanguage() {
-    let lang = select.value;
-    location.href = window.location.pathname + '#' + lang;
-    location.reload();
-}
+// // перенаправить на url с указанием языка
+// function changeURLLanguage() {
+//     let lang = select.value;
+//     location.href = window.location.pathname + '#' + lang;
+//     location.reload();
+// }
 
-function changeLanguage() {
-    let hash = window.location.hash;
-    hash = hash.substr(1);
-    // если в ссылке пропала одна буква, делает стартовую страницу ua
-    if (!allLang.includes(hash)) {
-        location.href = window.location.pathname + '#ua';
-        location.reload();// перезагрузить
-    }
-    select.value = hash;
-    // document.querySelector('title').innerHTML = langArr['unit'][hash];
+// function changeLanguage() {
+//     let hash = window.location.hash;
+//     hash = hash.substr(1);
+//     // если в ссылке пропала одна буква, делает стартовую страницу ua
+//     if (!allLang.includes(hash)) {
+//         location.href = window.location.pathname + '#ua';
+//         location.reload();// перезагрузить
+//     }
+//     select.value = hash;
+//     // document.querySelector('title').innerHTML = langArr['unit'][hash];
    
-    // функция смены языка
-    for (let key in langArr) {
-        // проверяем есть ли елемент, чтобы избежать ошибку
-        let elem = document.querySelector('.lng-' + key);
-        if (elem) {
-            elem.innerHTML = langArr[key][hash];
-        }
+//     // функция смены языка
+//     for (let key in langArr) {
+//         // проверяем есть ли елемент, чтобы избежать ошибку
+//         let elem = document.querySelector('.lng-' + key);
+//         if (elem) {
+//             elem.innerHTML = langArr[key][hash];
+//         }
 
-    }
-}
+//     }
+// }
 
-changeLanguage();
+// changeLanguage();
  
 // lang Eng
 
