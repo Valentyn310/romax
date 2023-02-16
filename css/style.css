@@ -765,7 +765,7 @@ input::placeholder {
     .swiper {
         max-width: 306px;
         width: 100%;
-        /* margin: 0 auto 20px auto; */
+        margin-top: 40px;
         padding: 20px;
         padding-bottom: 40px;
     }
@@ -812,23 +812,66 @@ section {
 }
 
 .univ__img {
-    width: 40%;
+    width: 50%;
+    height: auto;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     object-fit: cover;
 }
 .univ__content {
-    display: flex;
-    width: 60%;
+    /* display: flex; */
+    width: 50%;
 }
 
+.univ__revers {
+    flex-direction: row-reverse;
+
+}
+
+.univ__title {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.univ__title-mob {
+    display: none;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.univ__card1 {
+    padding: 0 20px;
+}
+
+.univ__card {
+    max-width: 350px;
+    padding: 30px;
+    margin: 100px auto;
+    border: 2px solid white
+}
+
+.univ__card span {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/*new colection */
 .colection__img {
-    height: auto;
+    width: 40% ;
     background-image: url(/img/colection/col1.png);
 }
 
+.colection__content {
+    width: 60%;
+}
+
+/* nev delivery */
+.delivery__img {
+    background-image: url(/img/colection/col1.png);
+}
 @media screen and (max-width: 768px) {
+    /* univ */
     .univ__inner {
         display: block !important;
     }
@@ -842,15 +885,39 @@ section {
         height: 50vh;
     }
 
-    .univ__content {
-        /* margin: 80px auto 20px auto; */
+    .univ__title {
+        display: none;
+    }
+
+    .univ__title-mob {
+        display: block;
+    }
+
+    /* univ card */
+    .univ__card {
+        margin: 40px auto;
     }
 }
-/* universal classend */
+
+@media screen and (max-width: 480px) {
+    /* univ */
+    .univ__card1 {
+        padding: 0 10px;
+    }
+
+    .univ__card span {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .univ__card p {
+        font-size: 14px;
+    }
+}
+/* universal class end */
 
 
 
-/* nev colection END */
 
 /* deliveri START */
 .del__section {
