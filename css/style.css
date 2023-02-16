@@ -543,6 +543,7 @@ input::placeholder {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    /* object-fit: cover; */
     transition: 1s;
 }
 
@@ -563,7 +564,7 @@ input::placeholder {
 .swiper {
     max-width: 356px;
     width: 100%;
-    margin-top: 120px;
+    margin: 100px auto 0 auto;
 
     border: 2px solid white;
     text-align: center;
@@ -738,14 +739,18 @@ input::placeholder {
     }
 
     .col_cont {
-        margin-top: 100px;
+        margin-top: 50px;
+        display: block;
     }
 
     .col__left {
-        display: none;
+        height: 50vh;
+        width: 100%;
+        background-position:bottom ;
     }
 
     .col__right {
+        margin-top: 80px;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -760,7 +765,7 @@ input::placeholder {
     .swiper {
         max-width: 306px;
         width: 100%;
-        margin: 0 auto 20px auto;
+        /* margin: 0 auto 20px auto; */
         padding: 20px;
         padding-bottom: 40px;
     }
@@ -769,12 +774,17 @@ input::placeholder {
 }
 
 @media screen and (max-width: 480px) {
+    .col__left {
+        height: 50vh;
+    }
+
     .col__right {
-        padding: 0 10px;
+        padding: 0;
     }
 
     .swiper {
         width: 80vw;
+        /* margin: 0 auto; */
     }
 
     .card p {
@@ -783,6 +793,64 @@ input::placeholder {
 }
 
 /* colection END */
+
+
+/* nev colection start */
+/* universal class */
+section {
+    /* height: 1000px; */
+}
+.univ__cont {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.univ__inner {
+    display: flex;
+    width: 100%;
+   
+}
+
+.univ__img {
+    width: 40%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.univ__content {
+    display: flex;
+    width: 60%;
+}
+
+.colection__img {
+    height: auto;
+    background-image: url(/img/colection/col1.png);
+}
+
+@media screen and (max-width: 768px) {
+    .univ__inner {
+        display: block !important;
+    }
+
+    .univ__content {
+        width: 100%;
+    }
+
+    .univ__img {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .univ__content {
+        /* margin: 80px auto 20px auto; */
+    }
+}
+/* universal classend */
+
+
+
+/* nev colection END */
 
 /* deliveri START */
 .del__section {
@@ -844,6 +912,7 @@ input::placeholder {
     background-image: url(/img/colection/col1.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -861,7 +930,9 @@ input::placeholder {
     }
 
     .del__foto {
-        display: none;
+        width: 100%;
+        height: 600px;
+        /* display: none; */
     }
 
     .del__info {
@@ -869,14 +940,18 @@ input::placeholder {
         flex-wrap: wrap;
         align-content: space-between;
 
-        background-image: url(/img/colection/col1.png);
+        /* background-image: url(/img/colection/col1.png);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover; */
     }
 
     .del__card {
         max-width: 400px;
         margin: 0 auto 30px auto;
+    }
+
+    .del__inner {
+        display: block;
     }
 }
 

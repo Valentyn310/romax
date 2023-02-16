@@ -32,62 +32,90 @@ let slide4 = document.querySelector(".slide4");
 let slide5 = document.querySelector(".slide5");
 let slide6 = document.querySelector(".slide6");
 
-function sas() {
-    if (window.innerWidth <= 768) {
-        function colBg() {
-            if (slide1.classList.contains("swiper-slide-active")) {
-                colRight.style.backgroundImage = "url('/img/colection/col1.png')";
-            }
-            else if (slide2.classList.contains("swiper-slide-active")) {
-                colRight.style.backgroundImage = "url('/img/colection/col2.png')";
-            }
-            else if (slide3.classList.contains("swiper-slide-active")) {
-                colRight.style.backgroundImage = "url('/img/colection/col3.png')";
-            }
-            else if (slide4.classList.contains("swiper-slide-active")) {
-                colRight.style.backgroundImage ="url('/img/colection/col4.png')";
-            }
-            else if (slide5.classList.contains("swiper-slide-active")) {
-                colRight.style.backgroundImage ="url('/img/colection/col5.png')";
-            }
-            else if (slide6.classList.contains("swiper-slide-active")) {
-                colRight.style.backgroundImage ="url('/img/colection/col6.png')";
-            }
-            else {
-                colRight.style.backgroundImage = "url('/img/colection/col1.png')";
-            }
-        };
-        setInterval(colBg, 100)
-        
-    } else {
-        function colBg1() {
-            if (slide1.classList.contains("swiper-slide-active")) {
-                colLeft.style.backgroundImage = "url('/img/colection/col1.png')";
-            }
-            else if (slide2.classList.contains("swiper-slide-active")) {
-                colLeft.style.backgroundImage = "url('/img/colection/col2.png')";
-            }
-            else if (slide3.classList.contains("swiper-slide-active")) {
-                colLeft.style.backgroundImage = "url('/img/colection/col3.png')";
-            }
-            else if (slide4.classList.contains("swiper-slide-active")) {
-                colLeft.style.backgroundImage = "url('/img/colection/col4.png')";
-            }
-            else if (slide5.classList.contains("swiper-slide-active")) {
-                colLeft.style.backgroundImage = "url('/img/colection/col5.png')";
-            }
-            else if (slide6.classList.contains("swiper-slide-active")) {
-                colLeft.style.backgroundImage = "url('/img/colection/col6.png')";
-            }
-            else {
-                colLeft.style.backgroundImage = "url('/img/colection/col1.png')";
-            }
-        };
-        
-        setInterval(colBg1, 100)
+// function sas() {
+//     if (window.innerWidth <= 768) {
+//         function colBg() {
+//             if (slide1.classList.contains("swiper-slide-active")) {
+//                 colRight.style.backgroundImage = "url('/img/colection/col1.png')";
+//             }
+//             else if (slide2.classList.contains("swiper-slide-active")) {
+//                 colRight.style.backgroundImage = "url('/img/colection/col2.png')";
+//             }
+//             else if (slide3.classList.contains("swiper-slide-active")) {
+//                 colRight.style.backgroundImage = "url('/img/colection/col3.png')";
+//             }
+//             else if (slide4.classList.contains("swiper-slide-active")) {
+//                 colRight.style.backgroundImage ="url('/img/colection/col4.png')";
+//             }
+//             else if (slide5.classList.contains("swiper-slide-active")) {
+//                 colRight.style.backgroundImage ="url('/img/colection/col5.png')";
+//             }
+//             else if (slide6.classList.contains("swiper-slide-active")) {
+//                 colRight.style.backgroundImage ="url('/img/colection/col6.png')";
+//             }
+//             else {
+//                 colRight.style.backgroundImage = "url('/img/colection/col1.png')";
+//             }
+//         };
+//         setInterval(colBg, 100)
+
+//     } else {
+//         function colBg1() {
+//             if (slide1.classList.contains("swiper-slide-active")) {
+//                 colLeft.style.backgroundImage = "url('/img/colection/col1.png')";
+//             }
+//             else if (slide2.classList.contains("swiper-slide-active")) {
+//                 colLeft.style.backgroundImage = "url('/img/colection/col2.png')";
+//             }
+//             else if (slide3.classList.contains("swiper-slide-active")) {
+//                 colLeft.style.backgroundImage = "url('/img/colection/col3.png')";
+//             }
+//             else if (slide4.classList.contains("swiper-slide-active")) {
+//                 colLeft.style.backgroundImage = "url('/img/colection/col4.png')";
+//             }
+//             else if (slide5.classList.contains("swiper-slide-active")) {
+//                 colLeft.style.backgroundImage = "url('/img/colection/col5.png')";
+//             }
+//             else if (slide6.classList.contains("swiper-slide-active")) {
+//                 colLeft.style.backgroundImage = "url('/img/colection/col6.png')";
+//             }
+//             else {
+//                 colLeft.style.backgroundImage = "url('/img/colection/col1.png')";
+//             }
+//         };
+
+//         setInterval(colBg1, 100)
+//     }
+// };
+// sas();
+
+function colBg1() {
+    if (slide1.classList.contains("swiper-slide-active")) {
+        colLeft.style.backgroundImage = "url('/img/colection/col1.png')";
+    }
+    else if (slide2.classList.contains("swiper-slide-active")) {
+        colLeft.style.backgroundImage = "url('/img/colection/col2.png')";
+    }
+    else if (slide3.classList.contains("swiper-slide-active")) {
+        colLeft.style.backgroundImage = "url('/img/colection/col3.png')";
+    }
+    else if (slide4.classList.contains("swiper-slide-active")) {
+        colLeft.style.backgroundImage = "url('/img/colection/col4.png')";
+    }
+    else if (slide5.classList.contains("swiper-slide-active")) {
+        colLeft.style.backgroundImage = "url('/img/colection/col5.png')";
+    }
+    else if (slide6.classList.contains("swiper-slide-active")) {
+        colLeft.style.backgroundImage = "url('/img/colection/col6.png')";
+    }
+    else {
+        colLeft.style.backgroundImage = "url('/img/colection/col1.png')";
     }
 };
-sas();
+
+setInterval(colBg1, 100)
+
+
 // swiper col Start
 
 // price
@@ -140,7 +168,7 @@ setInterval(price, 30000);
 //     }
 //     select.value = hash;
 //     // document.querySelector('title').innerHTML = langArr['unit'][hash];
-   
+
 //     // функция смены языка
 //     for (let key in langArr) {
 //         // проверяем есть ли елемент, чтобы избежать ошибку
@@ -153,7 +181,7 @@ setInterval(price, 30000);
 // }
 
 // changeLanguage();
- 
+
 // lang Eng
 
 
@@ -209,8 +237,8 @@ var swiper = new Swiper(".mySwiper", {
 var swiper1 = new Swiper(".mySwiper1", {
     cssMode: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
     // pagination: {
     //   el: ".swiper-pagination",
@@ -219,28 +247,28 @@ var swiper1 = new Swiper(".mySwiper1", {
     keyboard: true,
 
     // Default parameters
-  slidesPerView: 3,
-  spaceBetween: 10,
-  // Responsive breakpoints
-  breakpoints: {
-    // when window width is >= 320px
-    10: {
-      slidesPerView: 1,
-      spaceBetween: 20
-    },
-    // when window width is >= 480px
-    660: {
-      slidesPerView: 2,
-      spaceBetween: 30
-    },
-    // when window width is >= 768px
-    980: {
-      slidesPerView: 3,
-      spaceBetween: 30
+    slidesPerView: 3,
+    spaceBetween: 10,
+    // Responsive breakpoints
+    breakpoints: {
+        // when window width is >= 320px
+        10: {
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        // when window width is >= 480px
+        660: {
+            slidesPerView: 2,
+            spaceBetween: 30
+        },
+        // when window width is >= 768px
+        980: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        }
     }
-  }
 
-  });
+});
 
 
 
