@@ -628,16 +628,54 @@ input::placeholder {
 
 .card__img {
     height: 300px;
-    background-image: url(/img/colection/col1.1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     transition: 0.8s;
 }
 
-.card__img:hover {
+.card__img1 {
+    background-image: url(/img/colection/col1.1.png);
+}
+.card__img1:hover {
     background-image: url(/img/colection/col1.2.png);
 }
+
+.card__img2 {
+    background-image: url(/img/colection/col2.1.png);
+}
+.card__img2:hover {
+    background-image: url(/img/colection/col2.2.png);
+}
+
+.card__img3 {
+    background-image: url(/img/colection/col3.1.png);
+}
+.card__img3:hover {
+    background-image: url(/img/colection/col3.2.png);
+}
+
+.card__img4 {
+    background-image: url(/img/colection/col4.1.png);
+}
+.card__img4:hover {
+    background-image: url(/img/colection/col4.2.png);
+}
+
+.card__img5 {
+    background-image: url(/img/colection/col5.1.png);
+}
+.card__img5:hover {
+    background-image: url(/img/colection/col5.2.png);
+}
+
+.card__img6 {
+    background-image: url(/img/colection/col6.1.png);
+}
+.card__img6:hover {
+    background-image: url(/img/colection/col6.2.png);
+}
+
 
 .card__price {
     display: flex;

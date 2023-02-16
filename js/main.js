@@ -29,6 +29,8 @@ let slide1 = document.querySelector(".slide1");
 let slide2 = document.querySelector(".slide2");
 let slide3 = document.querySelector(".slide3");
 let slide4 = document.querySelector(".slide4");
+let slide5 = document.querySelector(".slide5");
+let slide6 = document.querySelector(".slide6");
 
 function sas() {
     if (window.innerWidth <= 768) {
@@ -37,19 +39,19 @@ function sas() {
                 colRight.style.backgroundImage = "url('/img/colection/col1.png')";
             }
             else if (slide2.classList.contains("swiper-slide-active")) {
-                colRight.style.backgroundImage = "url('/img/hero/hero1.png')";
+                colRight.style.backgroundImage = "url('/img/colection/col2.png')";
             }
             else if (slide3.classList.contains("swiper-slide-active")) {
-                colRight.style.backgroundImage = "url('/img/hero/hero2.png')";
+                colRight.style.backgroundImage = "url('/img/colection/col3.png')";
             }
             else if (slide4.classList.contains("swiper-slide-active")) {
-                colRight.style.backgroundImage = "url('/img/hero/hero.png')";
+                colRight.style.backgroundImage ="url('/img/colection/col4.png')";
             }
             else if (slide5.classList.contains("swiper-slide-active")) {
-                colRight.style.backgroundImage = "url('/img/hero/hero.png')";
+                colRight.style.backgroundImage ="url('/img/colection/col5.png')";
             }
-            else if (slide5.classList.contains("swiper-slide-active")) {
-                colRight.style.backgroundImage = "url('/img/hero/hero.png')";
+            else if (slide6.classList.contains("swiper-slide-active")) {
+                colRight.style.backgroundImage ="url('/img/colection/col6.png')";
             }
             else {
                 colRight.style.backgroundImage = "url('/img/colection/col1.png')";
@@ -63,19 +65,19 @@ function sas() {
                 colLeft.style.backgroundImage = "url('/img/colection/col1.png')";
             }
             else if (slide2.classList.contains("swiper-slide-active")) {
-                colLeft.style.backgroundImage = "url('/img/hero/hero1.png')";
+                colLeft.style.backgroundImage = "url('/img/colection/col2.png')";
             }
             else if (slide3.classList.contains("swiper-slide-active")) {
-                colLeft.style.backgroundImage = "url('/img/hero/hero2.png')";
+                colLeft.style.backgroundImage = "url('/img/colection/col3.png')";
             }
             else if (slide4.classList.contains("swiper-slide-active")) {
-                colLeft.style.backgroundImage = "url('/img/hero/hero.png')";
+                colLeft.style.backgroundImage = "url('/img/colection/col4.png')";
             }
             else if (slide5.classList.contains("swiper-slide-active")) {
-                colLeft.style.backgroundImage = "url('/img/hero/hero.png')";
+                colLeft.style.backgroundImage = "url('/img/colection/col5.png')";
             }
             else if (slide6.classList.contains("swiper-slide-active")) {
-                colLeft.style.backgroundImage = "url('/img/hero/hero.png')";
+                colLeft.style.backgroundImage = "url('/img/colection/col6.png')";
             }
             else {
                 colLeft.style.backgroundImage = "url('/img/colection/col1.png')";
