@@ -793,14 +793,9 @@ input::placeholder {
     }
 }
 
-/* colection END */
 
-
-/* nev colection start */
 /* universal class */
-section {
-    /* height: 1000px; */
-}
+
 .univ__cont {
     width: 100%;
     margin-top: 50px;
@@ -862,6 +857,7 @@ section {
 .colection__img {
     width: 40% ;
     background-image: url(/img/colection/col1.png);
+    transition: 2s;
 }
 
 .colection__content {
@@ -1626,8 +1622,6 @@ footer {
     width: 50%;
 }
 
-.form__cont {}
-
 /* form jqery */
 /* preloader */
 .preloader {
@@ -1700,10 +1694,7 @@ footer {
         transform: translateX(0px);
     }
 }
-
 /* preloader END */
-
-.contact-form {}
 
 .contact__form-style {
     max-width: 420px;
@@ -1889,8 +1880,6 @@ footer {
         margin-top: 20px;
         width: 100%;
     }
-
-
 }
 
 @media screen and (max-width: 768px) {
@@ -1946,89 +1935,4 @@ footer {
         width: auto;
     } 
 }
-
-
-
-
-
-
-
-@media (max-width: 768px) {
-   
-
-    
-
-    /* .contact-form__message {
-        padding-bottom: 10px;
-    }
-
-    .contact-form__input_name {
-        margin-bottom: 10px;
-    }
-
-    .contact-form__input_phone {
-        margin-bottom: 10px;
-    }
-
-    .contact-form__input_col {
-        margin-bottom: 10px;
-    }
-
-    .contact-form__input_size {
-        margin-bottom: 10px;
-    }
-
-    .contact-form__input_coment {
-        margin-bottom: 10px;
-    } */
-}
-
-@media (max-width: 480px) {
-    
-
-/*     
-
-    .form__line {
-       
-        justify-content: center;
-        width: 100%;
-        margin: 0;
-    }
-
-
-
-    .contact-form__input_name {
-        width: auto;
-        height: 35px;
-        background-size: 25px;
-    }
-
-    .contact-form__input_phone {
-        width: auto;
-        height: 35px;
-        background-size: 25px;
-    }
-
-    .contact-form__input_col {
-        width: auto;
-        max-width: 60px;
-        height: 35px;
-        background-size: 25px;
-    }
-
-    .contact-form__input_size {
-        width: auto;
-        height: 35px;
-        background-size: 25px;
-    }
-
-    .contact-form__input_coment {
-        width: auto;
-        height: 35px;
-        background-size: 25px;
-    } */
-
-    
-}
-
 /* form jqeryEND */

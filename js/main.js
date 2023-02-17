@@ -21,7 +21,7 @@ links.forEach(link => {
 // mobile menu END
 
 // swiper col Start
-let colLeft = document.querySelector(".col__left");
+let colLeft = document.querySelector(".col-bg");
 let colRight = document.querySelector(".col__right");
 let slideActiv = document.querySelector(".swiper-slide-active");
 
