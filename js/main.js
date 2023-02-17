@@ -190,16 +190,52 @@ setInterval(price, 30000);
 
 // form btn
 let formClos = document.querySelector('.form__btn');
-let formContainer = document.querySelector('.form__container')
+let formContainer1 = document.querySelector('.form__container1');
+let formContainer2 = document.querySelector('.form__container2');
+let formContainer3 = document.querySelector('.form__container3');
+let formContainer4 = document.querySelector('.form__container4');
+let formContainer5 = document.querySelector('.form__container5');
+let formContainer6 = document.querySelector('.form__container6');
 
-let card1 = document.querySelector('.card1__btn')
+let card1 = document.querySelector('.card1__btn');
+let card2 = document.querySelector('.card2__btn');
+let card3 = document.querySelector('.card3__btn');
+let card4 = document.querySelector('.card4__btn');
+let card5 = document.querySelector('.card5__btn');
+let card6 = document.querySelector('.card6__btn');
 
 card1.addEventListener('click', function () {
-    formContainer.classList.add('active');
-})
+    formContainer1.classList.add('active');
+});
+
+card2.addEventListener('click', function () {
+    formContainer2.classList.add('active');
+});
+
+card3.addEventListener('click', function () {
+    formContainer3.classList.add('active');
+});
+
+card4.addEventListener('click', function () {
+    formContainer4.classList.add('active');
+});
+
+card5.addEventListener('click', function () {
+    formContainer5.classList.add('active');
+});
+
+card6.addEventListener('click', function () {
+    formContainer6.classList.add('active');
+});
+
 
 formClos.addEventListener('click', function () {
-    formContainer.classList.remove('active');
+    formContainer1.classList.remove('active');
+    formContainer2.classList.remove('active');
+    formContainer3.classList.remove('active');
+    formContainer4.classList.remove('active');
+    formContainer5.classList.remove('active');
+    formContainer6.classList.remove('active');
 })
 
 

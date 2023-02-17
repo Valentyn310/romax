@@ -160,6 +160,88 @@ input::placeholder {
     }
 }
 
+/* preloader */
+.loader-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    position: fixed;
+    background-color: white;
+
+    transition: 0.6s;
+}
+
+.load-container {
+    position: relative;
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    letter-spacing: normal;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.linespinner {
+    width: 10px;
+    height: 30px;
+    background: black;
+    position: relative;
+    animation: linespinner 1s ease-in-out infinite;
+    animation-delay: 0.4s;
+    border-radius: 8px;
+}
+
+.linespinner:after,
+.linespinner:before {
+    border-radius: 8px;
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background: black;
+    animation: linespinner 1s ease-in-out infinite;
+}
+
+.linespinner:before {
+    right: 18px;
+    animation-delay: 0.15s;
+}
+
+.linespinner:after {
+    left: 18px;
+    animation-delay: 0.6s;
+}
+
+@keyframes linespinner {
+
+    0%,
+    100% {
+        background-color: black;
+        box-shadow: 0 0 0 black, 0 0 0 black;
+    }
+
+    50% {
+        background-color: black;
+        box-shadow: 0 -15px 0 black, 0 15px 0 black;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+    transform: translateY(-100%);
+}
+
+.visible {
+    visibility: visible;
+}
+/* preloader END*/
+
 /* header */
 .header {
     background-color: #0F0F0F;
@@ -395,8 +477,8 @@ input::placeholder {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    transition: 1s;
-    animation: hero-slide infinite 20s;
+    transition: 0.7s;
+    animation: hero-slide infinite 30s;
 }
 
 @keyframes hero-slide {
@@ -404,16 +486,24 @@ input::placeholder {
         background-image: url("/img/hero/hero.png");
     }
 
-    25% {
+    20% {
+        background-image: url("/img/hero/hero3.png");
+    }
+
+    40% {
+        background-image: url("/img/hero/hero2.png");
+    }
+
+    60% {
         background-image: url("/img/hero/hero1.png");
     }
 
-    75% {
-        background-image: url("/img/hero/hero.png");
+    80% {
+        background-image: url("/img/hero/hero4.png");
     }
-
+    
     100% {
-        background-image: url("/img/hero/hero1.png");
+        background-image: url("/img/hero/hero5.png");
     }
 }
 
@@ -871,12 +961,12 @@ input::placeholder {
 
 /* nev delivery */
 .delivery__img {
-    background-image: url(/img/colection/col1.png);
+    background-image: url(/img/delivery1.png);
 }
 
 /* new terms */
 .terms__img {
-    background-image: url(/img/colection/col1.png);
+    background-image: url(/img/terms1.png);
 }
 
 .terms__items {
@@ -900,7 +990,7 @@ input::placeholder {
 
 /* new contact form */
 .contact__img {
-    background-image: url(/img/colection/col1.png);
+    background-image: url(/img/back__call1.png);
 }
 
 .cont__form__title h3 {
@@ -913,7 +1003,7 @@ input::placeholder {
 
 /* about */
 .about__img {
-    background-image: url(/img/colection/col1.png);
+    background-image: url(/img/about1.png);
 }
 .about__card {
     border: none;
@@ -927,12 +1017,12 @@ input::placeholder {
 
 /* dpopshiping */
 .drop__img {
-    background-image: url(/img/colection/col1.png);
+    background-image: url(/img/drop1.png);
 }
 
 /* wishes */
 .wishes__img {
-    background-image: url(/img/colection/col1.png);
+    background-image: url(/img/wishes.png);
 }
 
 .wishes__card {
@@ -1263,7 +1353,7 @@ input::placeholder {
     width: 100%;
     height: 100%;
     max-width: 540px;
-    max-height: 510px;
+    max-height: 385px;
 }
 
 @media screen and (max-width: 1110px) {
@@ -1522,7 +1612,7 @@ footer {
 
 /* footer END*/
 /* new Form */
-.form__container {
+.form__container1 {
     visibility: hidden;
     width: 100%;
     height: 100%;
@@ -1535,11 +1625,107 @@ footer {
     transition: 0.3s;
 }
 
-.form__container.active {
+.form__container1.active {
     visibility: visible;
     transform: translateY(0);
     backdrop-filter: blur(4px);
 }
+
+.form__container2 {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    position: fixed;
+    top: 0px;
+    z-index: 20;
+    align-items: center;
+    align-content: center;
+    transition: 0.3s;
+}
+
+.form__container2.active {
+    visibility: visible;
+    transform: translateY(0);
+    backdrop-filter: blur(4px);
+}
+
+.form__container3 {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    position: fixed;
+    top: 0px;
+    z-index: 20;
+    align-items: center;
+    align-content: center;
+    transition: 0.3s;
+}
+
+.form__container3.active {
+    visibility: visible;
+    transform: translateY(0);
+    backdrop-filter: blur(4px);
+}
+
+.form__container4 {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    position: fixed;
+    top: 0px;
+    z-index: 20;
+    align-items: center;
+    align-content: center;
+    transition: 0.3s;
+}
+
+.form__container4.active {
+    visibility: visible;
+    transform: translateY(0);
+    backdrop-filter: blur(4px);
+}
+
+.form__container5 {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    position: fixed;
+    top: 0px;
+    z-index: 20;
+    align-items: center;
+    align-content: center;
+    transition: 0.3s;
+}
+
+.form__container5.active {
+    visibility: visible;
+    transform: translateY(0);
+    backdrop-filter: blur(4px);
+}
+
+.form__container6 {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    position: fixed;
+    top: 0px;
+    z-index: 20;
+    align-items: center;
+    align-content: center;
+    transition: 0.3s;
+}
+
+.form__container6.active {
+    visibility: visible;
+    transform: translateY(0);
+    backdrop-filter: blur(4px);
+}
+
 
 .form__inner1 {
     max-width: 1000px;
