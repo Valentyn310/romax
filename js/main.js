@@ -375,6 +375,11 @@ document.getElementById("tg").addEventListener("submit", function (e) {
     if (this.name.value === "" || this.phone.value === "" || this.quantity.value === "" || this.size.value === "") {
         success.innerHTML = "Заполните поля для отправки!"
         success.style.backgroundColor = "red"
+
+        setTimeout(function() {
+            success.innerHTML = "";
+            success.style.backgroundColor = "black";
+        }, 5000);
     } else {
         let message = `Заявка о покупке\n`;
         message += `Товар: ${this.theme.value} \n`;
@@ -401,6 +406,12 @@ document.getElementById("tg").addEventListener("submit", function (e) {
 
                 success.innerHTML = "Сообщение отправлено!"
                 success.style.backgroundColor = "green"
+
+                setTimeout(function() {
+                    success.innerHTML = "";
+                    success.style.backgroundColor = "black";
+                    
+                }, 5000);
             })
 
             // eror
@@ -409,7 +420,9 @@ document.getElementById("tg").addEventListener("submit", function (e) {
             })
             // действия после отправки
             .finally(() => {
-                console.log('конец')
+                // console.log('конец')
+
+               
             })
     }
 
@@ -424,6 +437,12 @@ document.getElementById("tg-back").addEventListener("submit", function (e) {
     if (this.name1.value === "" || this.phone1.value === "") {
         successBack.innerHTML = "Заполните поля для отправки!"
         successBack.style.backgroundColor = "red"
+
+        setTimeout(function() {
+            successBack.innerHTML = "";
+            successBack.style.backgroundColor = "black";
+            
+        }, 5000);
     } else {
         let message = `Обратная Связь ♻️\n`;
         message += `Имя: ${this.name1.value} \n`;
@@ -445,6 +464,12 @@ document.getElementById("tg-back").addEventListener("submit", function (e) {
 
                 successBack.innerHTML = "Сообщение отправлено!"
                 successBack.style.backgroundColor = "green"
+
+                setTimeout(function() {
+                    successBack.innerHTML = "";
+                    successBack.style.backgroundColor = "black";
+                    
+                }, 5000);
             })
 
             // eror
