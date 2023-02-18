@@ -89,27 +89,44 @@ let slide6 = document.querySelector(".slide6");
 // };
 // sas();
 
+let NumCaps = document.getElementById('NumCaps');
+let FormImg = document.getElementById('FormImg');
+
 function colBg1() {
     if (slide1.classList.contains("swiper-slide-active")) {
         colLeft.style.backgroundImage = "url('/img/colection/col1.png')";
+        NumCaps.value = ("CAPS 1️⃣");
+        FormImg.src = ("./img/form/form1.png");
     }
     else if (slide2.classList.contains("swiper-slide-active")) {
         colLeft.style.backgroundImage = "url('/img/colection/col2.png')";
+        NumCaps.value = ("CAPS2️⃣");
+        FormImg.src = ("./img/form/form2.png");
     }
     else if (slide3.classList.contains("swiper-slide-active")) {
         colLeft.style.backgroundImage = "url('/img/colection/col3.png')";
+        NumCaps.value = ("CAPS3️⃣");
+        FormImg.src = ("./img/form/form3.png");
     }
     else if (slide4.classList.contains("swiper-slide-active")) {
         colLeft.style.backgroundImage = "url('/img/colection/col4.png')";
+        NumCaps.value = ("CAPS4️⃣");
+        FormImg.src = ("./img/form/form4.png");
     }
     else if (slide5.classList.contains("swiper-slide-active")) {
         colLeft.style.backgroundImage = "url('/img/colection/col5.png')";
+        NumCaps.value = ("CAPS5️⃣");
+        FormImg.src = ("./img/form/form5.png");
     }
     else if (slide6.classList.contains("swiper-slide-active")) {
         colLeft.style.backgroundImage = "url('/img/colection/col6.png')";
+        NumCaps.value = ("CAPS2️⃣");
+        FormImg.src = ("./img/form/form6.png");
     }
     else {
         colLeft.style.backgroundImage = "url('/img/colection/col1.png')";
+        NumCaps.value = ("CAPS1️⃣");
+        FormImg.src = ("./img/form/form1.png");
     }
 };
 
@@ -190,13 +207,7 @@ setInterval(price, 30000);
 
 // form btn
 let formClos = document.querySelector('.form__btn');
-let formContainer1 = document.querySelector('.form__container1');
-let formContainer2 = document.querySelector('.form__container2');
-let formContainer3 = document.querySelector('.form__container3');
-let formContainer4 = document.querySelector('.form__container4');
-let formContainer5 = document.querySelector('.form__container5');
-let formContainer6 = document.querySelector('.form__container6');
-
+let formContainer = document.querySelector('.form__container');
 let card1 = document.querySelector('.card1__btn');
 let card2 = document.querySelector('.card2__btn');
 let card3 = document.querySelector('.card3__btn');
@@ -205,38 +216,76 @@ let card5 = document.querySelector('.card5__btn');
 let card6 = document.querySelector('.card6__btn');
 
 card1.addEventListener('click', function () {
-    formContainer1.classList.add('active');
+    formContainer.classList.add("active");
 });
 
 card2.addEventListener('click', function () {
-    formContainer2.classList.add('active');
+    formContainer.classList.add("active");
 });
 
 card3.addEventListener('click', function () {
-    formContainer3.classList.add('active');
+    formContainer.classList.add("active");
 });
 
 card4.addEventListener('click', function () {
-    formContainer4.classList.add('active');
+    formContainer.classList.add("active");
 });
 
 card5.addEventListener('click', function () {
-    formContainer5.classList.add('active');
+    formContainer.classList.add("active");
 });
 
 card6.addEventListener('click', function () {
-    formContainer6.classList.add('active');
+    formContainer.classList.add("active");
 });
 
-
 formClos.addEventListener('click', function () {
-    formContainer1.classList.remove('active');
-    formContainer2.classList.remove('active');
-    formContainer3.classList.remove('active');
-    formContainer4.classList.remove('active');
-    formContainer5.classList.remove('active');
-    formContainer6.classList.remove('active');
+    formContainer.classList.remove('active');
 })
+
+// formClos.addEventListener()
+
+
+// let formContainer1 = document.querySelector('.form__container1');
+// let formContainer2 = document.querySelector('.form__container2');
+// let formContainer3 = document.querySelector('.form__container3');
+// let formContainer4 = document.querySelector('.form__container4');
+// let formContainer5 = document.querySelector('.form__container5');
+// let formContainer6 = document.querySelector('.form__container6');
+
+// card1.addEventListener('click', function () {
+//     formContainer1.classList.add('active');
+// });
+
+// card2.addEventListener('click', function () {
+//     formContainer2.classList.add('active');
+// });
+
+// card3.addEventListener('click', function () {
+//     formContainer3.classList.add('active');
+// });
+
+// card4.addEventListener('click', function () {
+//     formContainer4.classList.add('active');
+// });
+
+// card5.addEventListener('click', function () {
+//     formContainer5.classList.add('active');
+// });
+
+// card6.addEventListener('click', function () {
+//     formContainer6.classList.add('active');
+// });
+
+
+// formClos.addEventListener('click', function () {
+//     formContainer1.classList.remove('active');
+//     formContainer2.classList.remove('active');
+//     formContainer3.classList.remove('active');
+//     formContainer4.classList.remove('active');
+//     formContainer5.classList.remove('active');
+//     formContainer6.classList.remove('active');
+// })
 
 
 
@@ -305,7 +354,116 @@ var swiper1 = new Swiper(".mySwiper1", {
     }
 
 });
-
-
-
 // swiper END
+
+
+
+// new form axios
+const TOKEN = "5831080414:AAEDl9iIHfULw0NGzMvXI9v9raKT7ei32yo";
+const CHAT_ID = "-785786427";
+const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+const success = document.getElementById('success');
+const successBack = document.getElementById('successBack');
+
+
+
+// слушатель
+document.getElementById("tg").addEventListener("submit", function (e) {
+    e.preventDefault();//сбрасываем стандартное поведение
+
+    // если поля не заполнены то красный, если нет то идет отправка сообщений
+    if (this.name.value === "" || this.phone.value === "" || this.quantity.value === "" || this.size.value === "") {
+        success.innerHTML = "Заполните поля для отправки!"
+        success.style.backgroundColor = "red"
+    } else {
+        let message = `Заявка о покупке\n`;
+        message += `Товар: ${this.theme.value} \n`;
+        message += `Имя: ${this.name.value} \n`;
+        message += `Телефон: ${this.phone.value} \n`;
+        message += `Количество: ${this.quantity.value} \n`;
+        message += `Размер: ${this.size.value} \n`;
+        message += `Коментарий: ${this.coment.value} \n`;
+
+        // сама отправка текста через метод axios
+        axios.post(URI_API, {
+            chat_id: CHAT_ID,
+            parser_mode: 'html', //какой тип текста будем передавать, их два
+            text: message
+        })
+
+            // стираем сообщение после отправки
+            .then((res) => {
+                this.name.value = "";
+                this.phone.value = "";
+                this.quantity.value = "";
+                this.size.value = "";
+                this.coment.value = "";
+
+                success.innerHTML = "Сообщение отправлено!"
+                success.style.backgroundColor = "green"
+            })
+
+            // eror
+            .catch((err) => {
+                console.warn(err);
+            })
+            // действия после отправки
+            .finally(() => {
+                console.log('конец')
+            })
+    }
+
+
+});
+
+// back__call
+document.getElementById("tg-back").addEventListener("submit", function (e) {
+    e.preventDefault();//сбрасываем стандартное поведение
+
+    // если поля не заполнены то красный, если нет то идет отправка сообщений
+    if (this.name1.value === "" || this.phone1.value === "") {
+        successBack.innerHTML = "Заполните поля для отправки!"
+        successBack.style.backgroundColor = "red"
+    } else {
+        let message = `Обратная Связь ♻️\n`;
+        message += `Имя: ${this.name1.value} \n`;
+        message += `Телефон: ${this.phone1.value} \n`;
+        message += `Коментарий: ${this.coment1.value} \n`;
+
+        // сама отправка текста через метод axios
+        axios.post(URI_API, {
+            chat_id: CHAT_ID,
+            parser_mode: 'html', //какой тип текста будем передавать, их два
+            text: message
+        })
+
+            // стираем сообщение после отправки
+            .then((res) => {
+                this.name1.value = "";
+                this.phone1.value = "";
+                this.coment1.value = "";
+
+                successBack.innerHTML = "Сообщение отправлено!"
+                successBack.style.backgroundColor = "green"
+            })
+
+            // eror
+            .catch((err) => {
+                console.warn(err);
+            })
+            // действия после отправки
+            .finally(() => {
+                console.log('конец')
+            })
+    }
+
+
+})
+
+
+
+
+// qvery form mask
+$(function () {
+    $('input[type="tel"]').mask('+38(000)000-00-00');
+});

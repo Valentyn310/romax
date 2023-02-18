@@ -28,6 +28,75 @@
         </div>
     </div>
 
+    <div class="form__container">
+        <div class="form__inner1">
+            <div class="form__top">
+                <div class="form__btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="form__inner">
+                <div class="form__img">
+                    <!-- <div class="form__img-content"> -->
+                    <img id="FormImg" src="./img/form/form1.png" alt="">
+                    <img src="./img/form/form-box.png" alt="">
+                    <img src="./img/form/head.png" alt="">
+                    <img src="./img/form/size.png" alt="">
+                    <!-- </div> -->
+                </div>
+                <div class="form__cont1">
+                    <div class="form__cont">
+
+                        <form id="tg" method="POST" class="contact__form-style"
+                            autocomplete="off" enctype="multipart/form-data">
+                            <p class="contact-form__title">
+                                Закажите обратный звонок и наш консультант свяжется с вами
+                            </p>
+                            <!-- <div class="preloader"></div> -->
+                                
+                            <p id="success" class="contact-form__message "></p>
+                            <!-- Поле с именем -->
+                            <div class="contact-form__input-wrapper_name">
+                                <input name="name" type="text" class="contact-form__input contact-form__input_name"
+                                    placeholder="Введите ваше имя">
+                            </div>
+                            <!-- Поле с телефоном -->
+                            <div class="contact-form__input-wrapper_phone">
+                                <input name="phone" type="tel" class="contact-form__input contact-form__input_phone"
+                                    placeholder="Введите ваш телефон">
+                            </div>
+                            
+                           <!-- Поле КОЛИЧЕСТВО -->
+                            <div class="contact-form__input-wrapper_phone">
+                                <input name="quantity" type="number" class="contact-form__input contact-form__input_col"
+                                    placeholder="Шт" min="1">
+                            </div>
+                            <!-- Поле РАЗМЕР -->
+                            <div class="contact-form__input-wrapper_phone">
+                                <input name="size" type="number" class="contact-form__input contact-form__input_size"
+                                    placeholder="Размер 54-56" max="56">
+                            </div>
+
+                           
+                            <div class="contact-form__input-wrapper_phone">
+                                <input name="coment" type="text" class="contact-form__input contact-form__input_coment"
+                                    placeholder="Комментарий">
+                            </div>
+                            <!--Поле с темой в письме-->
+                            <input id="NumCaps" name="theme" type="hidden" class="contact-form__input contact-form__input_theme"
+                                value="Card1">
+                            <!--Кнопка отправки формы-->
+                            <button type="submit" class="contact-form__button">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- header -->
     <header class="header">
         <div class="container">
@@ -173,6 +242,8 @@
                                 </div>
                             </div><!--/card1 -->
 
+                            
+
                             <div class="swiper-slide slide2"><!-- card2 -->
 
                                 <div class="card">
@@ -199,7 +270,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <a href="#"><button class="button card2__btn">Заказать</button></a>
+                                    <a href="#"><button class="button card2__btn ">Заказать</button></a>
                                 </div>
                             </div><!--/card2 -->
 
@@ -442,7 +513,7 @@
                     </div>
                     <div class="univ__card1">
                         <div class="univ__card">
-                            <form id="form-contact" method="POST" class="contact-form back__form" action="">
+                            <form id="tg-back" method="POST" class="contact-form-back back__form" action="">
 
                                 <div class="cont__form__title">
                                     <h3>Заказать обратный
@@ -450,15 +521,16 @@
 
                                     <p>Наш менеджер свяжется с вами в ближайшее время</p>
                                 </div>
-
-                                <input type="text" class="form-control form-name" name="name" placeholder="Имя"
+                                
+                                <p id="successBack" class="contact-form__message"></p>
+                                <input type="text" class="form-control form-name" name="name1" placeholder="Имя"
                                     required="" />
-                                <input type="tel" class="form-control form-phone" name="phone"
+
+                                <input type="tel" class="form-control form-phone" name="phone1"
                                     placeholder="Номер телефона" required="" />
+
                                 <input type="text" class="form-control form-comment" name="coment1"
                                     placeholder="Комментарий" required="" />
-                                <input name="theme" type="hidden" class="contact-form__input contact-form__input_theme"
-                                    value="Тип: перезвонить!">
                                 <button type="submit" class="contact-form__button button col__button">Отправить</button>
                             </form>
                         </div>
@@ -707,88 +779,20 @@
         </div>
     </footer>
 
-    <div class="form__container1">
-        <div class="form__inner1">
-            <div class="form__top">
-                <div class="form__btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <div class="form__inner">
-                <div class="form__img">
-                    <!-- <div class="form__img-content"> -->
-                    <img src="./img/form/form1.png" alt="">
-                    <img src="./img/form/form-box.png" alt="">
-                    <img src="./img/form/head.png" alt="">
-                    <img src="./img/form/size.png" alt="">
-                    <!-- </div> -->
-                </div>
-                <div class="form__cont1">
-                    <div class="form__cont">
-
-                        <form id="form-contact" method="POST" class="contact-form contact__form-style"
-                            autocomplete="off" enctype="multipart/form-data">
-                            <p class="contact-form__title">
-                                Закажите обратный звонок и наш консультант свяжется с вами
-                            </p>
-                            <div class="preloader"></div>
-                            <p class="contact-form__message"></p>
-
-                            <!-- Поле с именем -->
-                            <div class="contact-form__input-wrapper_name">
-                                <input name="name" type="text" class="contact-form__input contact-form__input_name"
-                                    placeholder="Введите ваше имя">
-                            </div>
-                            <!-- Поле с телефоном -->
-                            <div class="contact-form__input-wrapper_phone">
-                                <input name="phone" type="tel" class="contact-form__input contact-form__input_phone"
-                                    placeholder="Введите ваш телефон">
-                            </div>
-                            <!-- <div class="form__line"> -->
-                            <!-- Поле КОЛИЧЕСТВО -->
-                            <div class="contact-form__input-wrapper_phone">
-                                <input name="quantity" type="number" class="contact-form__input contact-form__input_col"
-                                    placeholder="Шт" min="1">
-                            </div>
-                            <!-- Поле РАЗМЕР -->
-                            <div class="contact-form__input-wrapper_phone">
-                                <input name="size" type="number" class="contact-form__input contact-form__input_size"
-                                    placeholder="Размер 54-56" max="56">
-                            </div>
-
-                            <!-- </div> -->
-                            <!-- Поле coment -->
-                            <div class="contact-form__input-wrapper_phone">
-                                <input name="coment" type="text" class="contact-form__input contact-form__input_coment"
-                                    placeholder="Комментарий">
-                            </div>
-                            <!--Поле с темой в письме-->
-                            <input name="theme" type="hidden" class="contact-form__input contact-form__input_theme"
-                                value="заявка Card1">
-                            <!--Кнопка отправки формы-->
-                            <button type="submit" class="contact-form__button">Отправить</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     
 
 
 
     <!-- form__telegramm -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="/telegramform/js/telegramform.js"></script>
     <!-- Маска ввода номера телефона. Подробнее тут: https://smartlanding.biz/maski-vvoda-telefona.html -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script>
-        $(function () {
-            $('input[type="tel"]').mask('+38(000)000-00-00');
-        });
+        
     </script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
