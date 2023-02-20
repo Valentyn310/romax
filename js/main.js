@@ -208,6 +208,7 @@ setInterval(price, 30000);
 // form btn
 let formClos = document.querySelector('.form__btn');
 let formContainer = document.querySelector('.form__container');
+
 let card1 = document.querySelector('.card1__btn');
 let card2 = document.querySelector('.card2__btn');
 let card3 = document.querySelector('.card3__btn');
@@ -242,6 +243,8 @@ card6.addEventListener('click', function () {
 formClos.addEventListener('click', function () {
     formContainer.classList.remove('active');
 })
+
+
 
 // formClos.addEventListener()
 
@@ -373,12 +376,14 @@ document.getElementById("tg").addEventListener("submit", function (e) {
 
     // если поля не заполнены то красный, если нет то идет отправка сообщений
     if (this.name.value === "" || this.phone.value === "" || this.quantity.value === "" || this.size.value === "") {
+        success.style.display = "block"
         success.innerHTML = "Заполните поля для отправки!"
         success.style.backgroundColor = "red"
 
         setTimeout(function() {
             success.innerHTML = "";
-            success.style.backgroundColor = "black";
+            success.style.backgroundColor = "#0F0F0F";
+            success.style.display = "none"
         }, 5000);
     } else {
         let message = `Заявка о покупке\n`;
@@ -404,12 +409,14 @@ document.getElementById("tg").addEventListener("submit", function (e) {
                 this.size.value = "";
                 this.coment.value = "";
 
+                success.style.display = "block"
                 success.innerHTML = "Сообщение отправлено!"
                 success.style.backgroundColor = "green"
 
                 setTimeout(function() {
                     success.innerHTML = "";
-                    success.style.backgroundColor = "black";
+                    success.style.backgroundColor = "#0F0F0F";
+                    success.style.display = "none"
                     
                 }, 5000);
             })
