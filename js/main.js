@@ -21,9 +21,9 @@ links.forEach(link => {
 // mobile menu END
 
 // swiper col Start
+let NumCaps = document.getElementById('NumCaps');
+let FormImg = document.getElementById('FormImg');
 let colLeft = document.querySelector(".col-bg");
-let colRight = document.querySelector(".col__right");
-let slideActiv = document.querySelector(".swiper-slide-active");
 
 let slide1 = document.querySelector(".slide1");
 let slide2 = document.querySelector(".slide2");
@@ -31,66 +31,6 @@ let slide3 = document.querySelector(".slide3");
 let slide4 = document.querySelector(".slide4");
 let slide5 = document.querySelector(".slide5");
 let slide6 = document.querySelector(".slide6");
-
-// function sas() {
-//     if (window.innerWidth <= 768) {
-//         function colBg() {
-//             if (slide1.classList.contains("swiper-slide-active")) {
-//                 colRight.style.backgroundImage = "url('/img/colection/col1.png')";
-//             }
-//             else if (slide2.classList.contains("swiper-slide-active")) {
-//                 colRight.style.backgroundImage = "url('/img/colection/col2.png')";
-//             }
-//             else if (slide3.classList.contains("swiper-slide-active")) {
-//                 colRight.style.backgroundImage = "url('/img/colection/col3.png')";
-//             }
-//             else if (slide4.classList.contains("swiper-slide-active")) {
-//                 colRight.style.backgroundImage ="url('/img/colection/col4.png')";
-//             }
-//             else if (slide5.classList.contains("swiper-slide-active")) {
-//                 colRight.style.backgroundImage ="url('/img/colection/col5.png')";
-//             }
-//             else if (slide6.classList.contains("swiper-slide-active")) {
-//                 colRight.style.backgroundImage ="url('/img/colection/col6.png')";
-//             }
-//             else {
-//                 colRight.style.backgroundImage = "url('/img/colection/col1.png')";
-//             }
-//         };
-//         setInterval(colBg, 100)
-
-//     } else {
-//         function colBg1() {
-//             if (slide1.classList.contains("swiper-slide-active")) {
-//                 colLeft.style.backgroundImage = "url('/img/colection/col1.png')";
-//             }
-//             else if (slide2.classList.contains("swiper-slide-active")) {
-//                 colLeft.style.backgroundImage = "url('/img/colection/col2.png')";
-//             }
-//             else if (slide3.classList.contains("swiper-slide-active")) {
-//                 colLeft.style.backgroundImage = "url('/img/colection/col3.png')";
-//             }
-//             else if (slide4.classList.contains("swiper-slide-active")) {
-//                 colLeft.style.backgroundImage = "url('/img/colection/col4.png')";
-//             }
-//             else if (slide5.classList.contains("swiper-slide-active")) {
-//                 colLeft.style.backgroundImage = "url('/img/colection/col5.png')";
-//             }
-//             else if (slide6.classList.contains("swiper-slide-active")) {
-//                 colLeft.style.backgroundImage = "url('/img/colection/col6.png')";
-//             }
-//             else {
-//                 colLeft.style.backgroundImage = "url('/img/colection/col1.png')";
-//             }
-//         };
-
-//         setInterval(colBg1, 100)
-//     }
-// };
-// sas();
-
-let NumCaps = document.getElementById('NumCaps');
-let FormImg = document.getElementById('FormImg');
 
 function colBg1() {
     if (slide1.classList.contains("swiper-slide-active")) {
@@ -201,10 +141,6 @@ setInterval(colBg1, 100)
 
 // lang Eng
 
-
-
-
-
 // form btn
 let formClos = document.querySelector('.form__btn');
 let formContainer = document.querySelector('.form__container');
@@ -291,11 +227,6 @@ formClos.addEventListener('click', function () {
 // })
 
 
-
-
-
-
-
 // preloader
 window.onload = function () {
     let preloader = document.getElementById('loader-wrapper');
@@ -303,8 +234,6 @@ window.onload = function () {
     preloader.classList.add('hidden'), 400
 
 }
-
-
 
 // swiper
 // swiper colection
@@ -320,7 +249,6 @@ var swiper = new Swiper(".mySwiper", {
         },
     },
 });
-
 
 var swiper1 = new Swiper(".mySwiper1", {
     cssMode: true,
@@ -380,7 +308,7 @@ document.getElementById("tg").addEventListener("submit", function (e) {
         success.innerHTML = "Заполните поля для отправки!"
         success.style.backgroundColor = "red"
 
-        setTimeout(function() {
+        setTimeout(function () {
             success.innerHTML = "";
             success.style.backgroundColor = "#0F0F0F";
             success.style.display = "none"
@@ -413,11 +341,11 @@ document.getElementById("tg").addEventListener("submit", function (e) {
                 success.innerHTML = "Сообщение отправлено!"
                 success.style.backgroundColor = "green"
 
-                setTimeout(function() {
+                setTimeout(function () {
                     success.innerHTML = "";
                     success.style.backgroundColor = "#0F0F0F";
                     success.style.display = "none"
-                    
+
                 }, 5000);
             })
 
@@ -429,7 +357,7 @@ document.getElementById("tg").addEventListener("submit", function (e) {
             .finally(() => {
                 // console.log('конец')
 
-               
+
             })
     }
 
@@ -445,10 +373,10 @@ document.getElementById("tg-back").addEventListener("submit", function (e) {
         successBack.innerHTML = "Заполните поля для отправки!"
         successBack.style.backgroundColor = "red"
 
-        setTimeout(function() {
+        setTimeout(function () {
             successBack.innerHTML = "";
             successBack.style.backgroundColor = "black";
-            
+
         }, 5000);
     } else {
         let message = `Обратная Связь ♻️\n`;
@@ -472,10 +400,10 @@ document.getElementById("tg-back").addEventListener("submit", function (e) {
                 successBack.innerHTML = "Сообщение отправлено!"
                 successBack.style.backgroundColor = "green"
 
-                setTimeout(function() {
+                setTimeout(function () {
                     successBack.innerHTML = "";
                     successBack.style.backgroundColor = "black";
-                    
+
                 }, 5000);
             })
 
@@ -511,25 +439,25 @@ window.addEventListener("scroll", trackScroll);
 goTopBtn.addEventListener("click", goTop);
 
 function trackScroll() {
-  // вычисляем положение от верхушки страницы
-  const scrolled = window.pageYOffset;
-  // считаем высоту окна браузера
-  const coords = document.documentElement.clientHeight;
-  // если вышли за пределы первого окна
-  if (scrolled > coords) {
-    // кнопка появляется
-    goTopBtn.classList.add("go-top--show");
-  } else {
-    // иначе исчезает
-    goTopBtn.classList.remove("go-top--show");
-  }
+    // вычисляем положение от верхушки страницы
+    const scrolled = window.pageYOffset;
+    // считаем высоту окна браузера
+    const coords = document.documentElement.clientHeight;
+    // если вышли за пределы первого окна
+    if (scrolled > coords) {
+        // кнопка появляется
+        goTopBtn.classList.add("go-top--show");
+    } else {
+        // иначе исчезает
+        goTopBtn.classList.remove("go-top--show");
+    }
 }
 
 function goTop() {
-  // пока не вернулись в начало страницы
-  if (window.pageYOffset > 0) {
-    // скроллим наверх
-    // window.scrollBy(0, -75); // второй аргумент - скорость
-    setTimeout(goTop, 0); // входим в рекурсию
-  }
+    // пока не вернулись в начало страницы
+    if (window.pageYOffset > 0) {
+        // скроллим наверх
+        // window.scrollBy(0, -75); // второй аргумент - скорость
+        setTimeout(goTop, 0); // входим в рекурсию
+    }
 }
