@@ -136,24 +136,24 @@ setInterval(colBg1, 100)
 // swiper col Start
 
 // price
-let colText = document.querySelector('.col');
-let col = 50;
-let num = Number(col);
+// let colText = document.querySelector('.col');
+// let col = 50;
+// let num = Number(col);
 
-function price() {
+// function price() {
 
-    if (col > 20) {
-        newNum = col - 1
-        colText.innerHTML = newNum;
-    } else {
-        colText.innerHTML = '20';
-    }
-    return col = newNum;
-}
+//     if (col > 20) {
+//         newNum = col - 1
+//         colText.innerHTML = newNum;
+//     } else {
+//         colText.innerHTML = '20';
+//     }
+//     return col = newNum;
+// }
 
-price();
+// price();
 
-setInterval(price, 30000);
+// setInterval(price, 30000);
 // price
 
 
@@ -525,11 +525,11 @@ function trackScroll() {
   }
 }
 
-// function goTop() {
-//   // пока не вернулись в начало страницы
-//   if (window.pageYOffset > 0) {
-//     // скроллим наверх
-//     // window.scrollBy(0, -75); // второй аргумент - скорость
-//     setTimeout(goTop, 0); // входим в рекурсию
-//   }
-// }
+function goTop() {
+  // пока не вернулись в начало страницы
+  if (window.pageYOffset > 0) {
+    // скроллим наверх
+    // window.scrollBy(0, -75); // второй аргумент - скорость
+    setTimeout(goTop, 0); // входим в рекурсию
+  }
+}
