@@ -10,7 +10,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: white;
@@ -1654,7 +1654,7 @@ footer {
 
 .foot__num {
     font-family: 'PT Sans', sans-serif;
-    color: #0075B2;
+    /* color: #0075B2; */
     text-decoration: underline;
 }
 
