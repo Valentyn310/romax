@@ -257,6 +257,18 @@ input::placeholder {
     align-items: center;
 }
 
+.header__logo {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.header__left {
+    display: flex;
+
+    
+}
+
 .header__nav {
     display: flex;
     justify-content: space-between;
@@ -298,7 +310,7 @@ input::placeholder {
 }
 
 .sel__ua {
-    background: url(/img/ua.png) left no-repeat;
+    /* background: url(/img/ua.png) left no-repeat; */
     background-size: cover;
     width: 50px;
 }
@@ -908,7 +920,7 @@ input::placeholder {
 .univ__content {
     /* display: flex; */
     width: 50%;
-    margin-top: 40px;
+    
 }
 
 .univ__revers {
@@ -1022,12 +1034,10 @@ input::placeholder {
 
 /* wishes */
 .wishes__img {
-    background-image: url(/img/wishes.png);
+    background-image: url(/img/wishes1.png);
 }
 
-.wishes__card {
-    margin-bottom: 70px !important;
-}
+
 
 @media screen and (max-width: 768px) {
     /* univ */
@@ -1037,6 +1047,7 @@ input::placeholder {
 
     .univ__content {
         width: 100%;
+        margin-top: 40px;
     }
 
     .univ__img {
@@ -1059,6 +1070,11 @@ input::placeholder {
     /* dpopshiping */
     .drop__img {
         display: none;
+    }
+
+    /* wishes */
+    .wishes__card {
+        margin-bottom: 70px !important;
     }
 }
 
@@ -1531,12 +1547,27 @@ input::placeholder {
     padding: 25px 0;
 }
 
+.wishes__contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+    padding-top: 20px;
+}
+
 .wishes__foto {
-    background-image: url(/img/wishes.png) !important;
+    background-image: url(/img/wishes1.png) !important;
 }
 
 
 @media screen and (max-width: 768px) {
+    .wishes__card {
+        text-align: center;
+    }
+    .wishes__contact {
+        margin: 0 auto;
+    }
+
     .wishes__subtitle {
         width: 100%;
     }
@@ -1544,7 +1575,7 @@ input::placeholder {
     
 
     .wishes__bg {
-        background-image: url(/img/wishes.png) !important;
+        background-image: url(/img/wishes1.png) !important;
     }
 }
 
@@ -1599,15 +1630,50 @@ footer {
     justify-content: center;
 }
 
+.buttons {
+    display: flex;
+    margin-top: 60px;
+}
+
 .fut__button {
     margin: 0;
-    margin-top: 60px;
+    width: 200px;
+    height: 54px;
+    margin-right: 10px;
+
+}
+
+.scroll {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .foot__num {
     font-family: 'PT Sans', sans-serif;
     color: #0075B2;
     text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    
+.fut__line {
+    margin: 20px auto;
+}
+
+.fut__item h2 {
+    text-align: center;
+}
+
+.fut__inner {
+    gap: 40px;
+}
+
+.buttons {
+    margin-top: 30px;
+}
 }
 
 /* footer END*/
@@ -1624,6 +1690,8 @@ footer {
     align-content: center;
     transition: 0.3s;
 }
+
+
 
 .form__container.active {
     visibility: visible;

@@ -49,13 +49,13 @@
                 <div class="form__cont1">
                     <div class="form__cont">
 
-                        <form id="tg" method="POST" class="contact__form-style"
-                            autocomplete="off" enctype="multipart/form-data">
+                        <form id="tg" method="POST" class="contact__form-style" autocomplete="off"
+                            enctype="multipart/form-data">
                             <p class="contact-form__title">
                                 Закажите обратный звонок и наш консультант свяжется с вами
                             </p>
                             <!-- <div class="preloader"></div> -->
-                                
+
                             <p id="success" class="contact-form__message ">ty</p>
                             <!-- Поле с именем -->
                             <div class="contact-form__input-wrapper_name">
@@ -67,8 +67,8 @@
                                 <input name="phone" type="tel" class="contact-form__input contact-form__input_phone"
                                     placeholder="Введите ваш телефон">
                             </div>
-                            
-                           <!-- Поле КОЛИЧЕСТВО -->
+
+                            <!-- Поле КОЛИЧЕСТВО -->
                             <div class="contact-form__input-wrapper_phone">
                                 <input name="quantity" type="number" class="contact-form__input contact-form__input_col"
                                     placeholder="Шт" min="1">
@@ -79,14 +79,14 @@
                                     placeholder="Размер 54-56" max="56">
                             </div>
 
-                           
+
                             <div class="contact-form__input-wrapper_phone">
                                 <input name="coment" type="text" class="contact-form__input contact-form__input_coment"
                                     placeholder="Комментарий">
                             </div>
                             <!--Поле с темой в письме-->
-                            <input id="NumCaps" name="theme" type="hidden" class="contact-form__input contact-form__input_theme"
-                                value="Card1">
+                            <input id="NumCaps" name="theme" type="hidden"
+                                class="contact-form__input contact-form__input_theme" value="Card1">
                             <!--Кнопка отправки формы-->
                             <button type="submit" class="contact-form__button">Отправить</button>
                         </form>
@@ -101,21 +101,24 @@
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <a href="/"><img src="./img/logo.png" alt=""></a>
-                <nav class="header__nav">
-                    <ul class="nav__list">
-                        <li class="head__link lng-header1"><a href="#hero">Головна</a></li>
-                        <li class="head__link lng-header2"><a href="#collection">Каталог</a></li>
-                        <li class="head__link lng-header3"><a href="#deliveri">Доставка</a></li>
-                        <li class="head__link lng-header4"><a href="#drop">Співпраця</a></li>
-                    </ul>
-                </nav>
+                <div class="header__left">
+
+                    <a class="header__logo" href="/"><img src="./img/logo.png" alt=""></a>
+                    <nav class="header__nav">
+                        <ul class="nav__list">
+                            <li class="head__link lng-header1"><a href="#hero">Головна</a></li>
+                            <li class="head__link lng-header2"><a href="#collection">Каталог</a></li>
+                            <li class="head__link lng-header3"><a href="#deliveri">Доставка</a></li>
+                            <li class="head__link lng-header4"><a href="#drop">Співпраця</a></li>
+                        </ul>
+                    </nav>
+                </div>
                 <div class="header__contact">
 
                     <!-- <div class="header__lang"><img src="./img/ua.png" alt=""></div> -->
                     <select class="change-lang select sel__ua">
-                        <option class="sel__ru" value="ru">RU</option>
                         <option class="sel__ua" value="ua">UA</option>
+                        <option class="sel__ru" value="ru">RU</option>
                     </select>
 
 
@@ -242,7 +245,7 @@
                                 </div>
                             </div><!--/card1 -->
 
-                            
+
 
                             <div class="swiper-slide slide2"><!-- card2 -->
 
@@ -521,7 +524,7 @@
 
                                     <p>Наш менеджер свяжется с вами в ближайшее время</p>
                                 </div>
-                                
+
                                 <p id="successBack" class="contact-form__message"></p>
                                 <input type="text" class="form-control form-name" name="name1" placeholder="Имя"
                                     required="" />
@@ -627,18 +630,19 @@
     </section>
     <!-- dropshipping END-->
     <!-- revies START -->
-    <section class="del__section" id="revis">
+    <!-- <section class="del__section" id="revis">
         <div class="container rev__container">
             <div class="title">
                 <h1>ОТЗЫВЫ</h1>
                 <div class="line"></div>
             </div>
-            <div class="rev__inner">
+            <div class="rev__inner"> -->
+
                 <!-- Swiper -->
-                <div class="swiper mySwiper1 rev__swiper">
+                <!-- <div class="swiper mySwiper1 rev__swiper">
                     <div class="swiper-wrapper">
 
-                        <div class="swiper-slide rev__slide"><!--slide1-->
+                        <div class="swiper-slide rev__slide">
                             <div class="rev__img">
                                 <img src="./img/revies/face1.png" alt="">
                             </div>
@@ -650,7 +654,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="swiper-slide rev__slide"><!--slide2-->
+                        <div class="swiper-slide rev__slide">
                             <div class="rev__img">
                                 <img src="./img/revies/face2.png" alt="">
                             </div>
@@ -661,7 +665,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="swiper-slide rev__slide"><!--slide3-->
+                        <div class="swiper-slide rev__slide">
                             <div class="rev__img">
                                 <img src="./img/revies/face3.png" alt="">
                             </div>
@@ -672,7 +676,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="swiper-slide rev__slide"><!--slide4-->
+                        <div class="swiper-slide rev__slide">
                             <div class="rev__img">
                                 <img src="./img/revies/face4.png" alt="">
                             </div>
@@ -684,7 +688,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="swiper-slide rev__slide"><!--slide5-->
+                        <div class="swiper-slide rev__slide">
                             <div class="rev__img">
                                 <img src="./img/revies/face5.png" alt="">
                             </div>
@@ -703,30 +707,45 @@
                 <div class="swiper-button-next"></div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- revies END -->
     <!-- wishes START -->
     <section>
         <div class="container univ__cont">
             <div class="container univ__cont">
                 <div class="univ__title">
-                    <h1>ПОБАЖАННЯ</h1>
+                    <h1>КОНТАКТИ</h1>
                     <div class="line"></div>
                 </div>
                 <div class="univ__inner">
                     <div class="univ__img wishes__img"></div>
                     <div class="univ__content">
                         <div class="univ__title-mob">
-                            <h1>ПОБАЖАННЯ</h1>
+                            <h1>КОНТАКТИ</h1>
                             <div class="line"></div>
                         </div>
                         <div class="univ__card1">
                             <div class="univ__card about__card wishes__card">
                                 <p>
-                                    Незважаючи на всі негаразди, хочемо побажати миру,
-                                    спокою, тепла. Бережіть себе, віримо в наших захисників
-                                    ми обов’язково переможемо!
+                                    Адрес: Харків вул. Кричевского д. 40
+                                    Менеджер: <a class="foot__num" href="tel:+38067597033">+380675970336 Катерина</a>
+
+                                   
                                 </p>
+                                <div class="wishes__contact">
+                                    <a class="" href="viber:+380731005759">
+                                        <img class="icon__one" src="./img/social/social_icons1.png" alt="">
+                                        <img class="icon__hov" src="./img/social/social_icons1.1.png" alt="">
+                                    </a>
+                                    <a class="" href="https://t.me/Cherry_Cherry30">
+                                        <img class="icon__one" src="./img/social/social_icons2.png" alt="">
+                                        <img class="icon__hov" src="./img/social/social_icons2.2.png" alt="">
+                                    </a>
+                                    <a class="" href="tel:+380731005759">
+                                        <img class="icon__one" src="./img/social/social_icons3.png" alt="">
+                                        <img class="icon__hov" src="./img/social/social_icons3.3.png" alt="">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -748,40 +767,33 @@
                     </p>
                 </div>
                 <div class="fut__item">
-                    <h2>Контакты</h2>
+                    <h2>Побажання</h2>
                     <div class="line fut__line"></div>
                     <p>
-                        Адрес: Харків вул. Кричевского д. 40
-                        Менеджер: <a class="foot__num" href="tel:+38067597033">+380675970336 Черри</a>
+                        Незважаючи на всі негаразди, хочемо побажати миру,
+                        спокою, тепла. Бережіть себе, віримо в наших захисників
+                        ми обов’язково переможемо!
                     </p>
-                    <div class="fut__contact">
-                        <a class="" href="viber:+380731005759">
-                            <img class="icon__one" src="./img/social/social_icons1.png" alt="">
-                            <img class="icon__hov" src="./img/social/social_icons1.1.png" alt="">
-                        </a>
-                        <a class="" href="https://t.me/Cherry_Cherry30">
-                            <img class="icon__one" src="./img/social/social_icons2.png" alt="">
-                            <img class="icon__hov" src="./img/social/social_icons2.2.png" alt="">
-                        </a>
-                        <a class="" href="tel:+380731005759">
-                            <img class="icon__one" src="./img/social/social_icons3.png" alt="">
-                            <img class="icon__hov" src="./img/social/social_icons3.3.png" alt="">
-                        </a>
-                    </div>
+                    
                     <a class="fut__logo" href="/"><img src="./img/logo.png" alt=""></a>
                 </div>
                 <div class="fut__item">
+
                     <h2>Обратный звонок</h2>
                     <div class="line fut__line"></div>
+                    <div class="buttons">
                     <a href="#contact__form"><button class="button fut__button">Заказать звонок</button></a>
+                    <a href="/"><div class=" button scroll"><img src="./img/scroll.png" alt=""></div></a>
+                </div>
+                    
                 </div>
             </div>
         </div>
     </footer>
 
-    
 
-    
+
+
 
 
 
@@ -792,7 +804,7 @@
     <!-- Маска ввода номера телефона. Подробнее тут: https://smartlanding.biz/maski-vvoda-telefona.html -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script>
-        
+
     </script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
