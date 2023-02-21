@@ -726,8 +726,9 @@ input::placeholder {
 }
 
 .card p {
-    text-align: start;
-    padding-top: 10px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .card__img {
