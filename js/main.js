@@ -1,3 +1,62 @@
+// инициализация
+var backgrounds = [
+    './img/hero/hero1.png',
+    './img/hero/hero2.png',
+    './img/hero/hero3.png',
+    './img/hero/hero4.png',
+    './img/hero/hero5.png',
+
+    './img/about1.png',
+    './img/back__call1.png',
+    './img/delivery1.png',
+    './img/drop1.png',
+    './img/terms1.png',
+    './img/wishes1.png',
+
+    './img/form/form1.png',
+    './img/form/form2.png',
+    './img/form/form3.png',
+    './img/form/form4.png',
+    './img/form/form5.png',
+    './img/form/form6.png',
+    './img/form/form-box.png',
+    './img/form/head.png',
+    './img/form/size.png',
+
+    './img/galery/galery__item1.png',
+    './img/galery/galery__item2.png',
+    './img/galery/galery__item3.png',
+    './img/galery/galery__item300.1.png',
+    './img/galery/galery__item300.2.png',
+    './img/galery/galery__item300.3.png',
+
+    './img/colection/col1.png',
+    './img/colection/col2.png',
+    './img/colection/col3.png',
+    './img/colection/col4.png',
+    './img/colection/col5.png',
+    './img/colection/col6.png',
+    './img/colection/col1.1.png',
+    './img/colection/col1.2.png',
+    './img/colection/col2.1.png',
+    './img/colection/col2.2.png',
+    './img/colection/col3.1.png',
+    './img/colection/col3.2.png',
+    './img/colection/col4.1.png',
+    './img/colection/col4.2.png',
+    './img/colection/col5.1.png',
+    './img/colection/col5.2.png',
+    './img/colection/col6.1.png',
+    './img/colection/col6.2.png',
+]
+
+var images = [];
+        for (var i = 0; i < backgrounds.length; i++) {
+        images[i] = new Image();
+        images[i].src = backgrounds[i];
+    }
+
+
 // mobile menu START
 let menuBtn = document.querySelector('.menu-btn');
 let menu = document.querySelector('.menu');
@@ -461,3 +520,23 @@ function goTop() {
         setTimeout(goTop, 0); // входим в рекурсию
     }
 }
+
+
+
+// svg icon
+$("img.img-svg").each(function () {
+    var $img = $(this);
+    var imgClass = $img.attr("class");
+    var imgURL = $img.attr("src");
+    $.get(imgURL, function (data) {
+        var $svg = $(data).find("svg");
+        if (typeof imgClass !== "undefined") {
+            $svg = $svg.attr("class", imgClass + " replaced-svg");
+        }
+        $svg = $svg.removeAttr("xmlns:a");
+        if (!$svg.attr("viewBox") && $svg.attr("height") && $svg.attr("width")) {
+            $svg.attr("viewBox", "0 0 " + $svg.attr("height") + " " + $svg.attr("width"))
+        }
+        $img.replaceWith($svg);
+    }, "xml");
+});

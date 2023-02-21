@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romax</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -72,7 +75,7 @@
                             <!-- Поле РАЗМЕР -->
                             <div class="contact-form__input-wrapper_phone">
                                 <input name="size" type="number" class="contact-form__input contact-form__input_size"
-                                    placeholder="Размер 54-56" max="56">
+                                    placeholder="Размер 54-56" min="54" max="56">
                             </div>
 
 
@@ -113,17 +116,14 @@
                         <option class="sel__ua" value="ua">UA</option>
                         <option class="sel__ru" value="ru">RU</option>
                     </select>
-                    <a class="contact__icon" href="viber:+380731005759">
-                        <img class="icon__one" src="./img/social/social_icons1.png" alt="">
-                        <img class="icon__hov" src="./img/social/social_icons1.1.png" alt="">
+                    <a class="contact__icon " href="viber:+380731005759">
+                        <img class="icon__one icon__svg img-svg" src="./img/social/viber.svg" alt="">
                     </a>
-                    <a class="contact__icon" href="https://t.me/Cherry_Cherry30">
-                        <img class="icon__one" src="./img/social/social_icons2.png" alt="">
-                        <img class="icon__hov" src="./img/social/social_icons2.2.png" alt="">
+                    <a class="contact__icon " href="https://t.me/Cherry_Cherry30">
+                        <img class="icon__two icon__svg img-svg" src="./img/social/telegram.svg" alt="">
                     </a>
-                    <a class="contact__icon" href="tel:+380731005759">
-                        <img class="icon__one" src="./img/social/social_icons3.png" alt="">
-                        <img class="icon__hov" src="./img/social/social_icons3.3.png" alt="">
+                    <a class="contact__icon " href="tel:+380731005759">
+                        <img class="icon__tree icon__svg img-svg" src="./img/social/phone.svg" alt="">
                     </a>
                     <div class="menu-btn">
                         <span></span>
@@ -148,17 +148,15 @@
             </nav>
             <div class="mob__contact">
                 <a class="" href="viber:+380731005759">
-                    <img class="icon__one" src="./img/social/social_icons1.png" alt="">
-                    <img class="icon__hov" src="./img/social/social_icons1.1.png" alt="">
+                    <img class="icon__one icon__svg img-svg" src="./img/social/viber.svg" alt="">
                 </a>
                 <a class="" href="https://t.me/Cherry_Cherry30">
-                    <img class="icon__one" src="./img/social/social_icons2.png" alt="">
-                    <img class="icon__hov" src="./img/social/social_icons2.2.png" alt="">
+                    <img class="icon__two icon__svg img-svg" src="./img/social/telegram.svg" alt="">
                 </a>
                 <a class="" href="tel:+380731005759">
-                    <img class="icon__one" src="./img/social/social_icons3.png" alt="">
-                    <img class="icon__hov" src="./img/social/social_icons3.3.png" alt="">
+                    <img class="icon__tree icon__svg img-svg" src="./img/social/phone.svg" alt="">
                 </a>
+                
             </div>
         </div>
     </div>
@@ -196,7 +194,8 @@
                 <div class="line"></div>
             </div>
             <div class="univ__inner">
-                <div class="univ__img colection__img col-bg">
+                <div class="univ__img colection__img col-bg"data-aos="fade-up"
+                data-aos-duration="3000">
                 </div>
                 <div class="univ__content colection__content">
                     <div class="swiper mySwiper">
@@ -214,7 +213,7 @@
                                         <span class="col__fun">1230грн</span>
                                         <span class="col__fin">845грн</span>
                                     </div>
-                                    <a href="#"><button class="button card1__btn">Заказать</button></a>
+                                    <a href="javascript:void(0)"><button class="button card1__btn">Заказать</button></a>
                                 </div>
                             </div><!--/card1 -->
 
@@ -231,7 +230,7 @@
                                         <span class="col__fun">1230грн</span>
                                         <span class="col__fin">845грн</span>
                                     </div>
-                                    <a href="#"><button class="button card2__btn">Заказать</button></a>
+                                    <a href="javascript:void(0)"><button class="button card2__btn">Заказать</button></a>
                                 </div>
                             </div><!--/card2 -->
 
@@ -247,7 +246,7 @@
                                         <span class="col__fun">1230грн</span>
                                         <span class="col__fin">845грн</span>
                                     </div>
-                                    <a href="#"><button class="button card3__btn">Заказать</button></a>
+                                    <a href="javascript:void(0)"><button class="button card3__btn">Заказать</button></a>
                                 </div>
                             </div><!--/card3 -->
 
@@ -263,7 +262,7 @@
                                         <span class="col__fun">1230грн</span>
                                         <span class="col__fin">845грн</span>
                                     </div>
-                                    <a href="#"><button class="button card4__btn">Заказать</button></a>
+                                    <a href="javascript:void(0)"><button class="button card4__btn">Заказать</button></a>
                                 </div>
                             </div><!--/card4 -->
 
@@ -280,7 +279,7 @@
                                         <span class="col__fun">1230грн</span>
                                         <span class="col__fin">845грн</span>
                                     </div>
-                                    <a href="#"><button class="button card5__btn">Заказать</button></a>
+                                    <a href="javascript:void(0)"><button class="button card5__btn">Заказать</button></a>
                                 </div>
                             </div><!--/card5 -->
 
@@ -296,7 +295,7 @@
                                         <span class="col__fun">1230грн</span>
                                         <span class="col__fin">845грн</span>
                                     </div>
-                                    <a href="#"><button class="button card6__btn">Заказать</button></a>
+                                    <a href="javascript:void(0)"><button class="button card6__btn">Заказать</button></a>
                                 </div>
                             </div><!--/card6 -->
                         </div>
@@ -315,8 +314,10 @@
                 <h1>ЯК ЗАМОВИТИ</h1>
                 <div class="line"></div>
             </div>
-            <div class="univ__inner">
-                <div class="univ__img terms__img"></div>
+            <div class="univ__inner univ__revers">
+                <div class="univ__img terms__img" data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"></div>
                 <div class="univ__content">
                     <div class="univ__title-mob">
                         <h1>ЯК ЗАМОВИТИ</h1>
@@ -368,8 +369,10 @@
                 <h1>ПЕРЕВАГИ</h1>
                 <div class="line"></div>
             </div>
-            <div class="univ__inner univ__revers">
-                <div class="univ__img delivery__img"></div>
+            <div class="univ__inner ">
+                <div class="univ__img delivery__img" data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"></div>
                 <div class="univ__content ">
                     <div class="univ__title-mob">
                         <h1>Переваги</h1>
@@ -411,7 +414,9 @@
                 <div class="line"></div>
             </div>
             <div class="univ__inner univ__revers">
-                <div class="univ__img  contact__img"></div>
+                <div class="univ__img  contact__img" data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" data-aos-duration="1000"></div>
                 <div class="univ__content">
                     <div class="univ__title-mob">
                         <h1>ЗАЯВКА</h1>
@@ -454,8 +459,12 @@
                 <div class="line"></div>
             </div>
             <div class="univ__inner">
-                <div class="univ__img about__img univ__revers"></div>
-                <div class="univ__content">
+                <div class="univ__img about__img univ__revers" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom" data-aos-duration="1000"></div>
+                <div class="univ__content" data-aos="fade-left"
+                data-aos-anchor="#example-anchor"
+                data-aos-offset="500"
+                data-aos-duration="500">
                     <div class="univ__title-mob">
                         <h1>ПРО НАС</h1>
                         <div class="line"></div>
@@ -484,13 +493,13 @@
                 <h1>ГАЛЕРЕЯ</h1>
                 <div class="line"></div>
             </div>
-            <div class="galery__inner">
-                <div class="galery__elem1">
+            <div class="galery__inner" >
+                <div class="galery__elem1"data-aos="zoom-in-up" data-aos-duration="1000">
                     <img class="galery__item" src="./img/galery/galery__item1.png" alt="">
                     <img class="galery__item" src="./img/galery/galery__item2.png" alt="">
                     <img class="galery__item" src="./img/galery/galery__item3.png" alt="">
                 </div>
-                <div class="galery__elem2">
+                <div class="galery__elem2" data-aos="zoom-in-left" data-aos-duration="1000">
                     <img class="galery__item__right" src="./img/galery/galery__item300.1.png" alt="">
                     <img class="galery__item__right" src="./img/galery/galery__item300.2.png" alt="">
                     <img class="galery__item__right" src="./img/galery/galery__item300.3.png" alt="">
@@ -507,8 +516,10 @@
                 <div class="line"></div>
             </div>
             <div class="univ__inner univ__revers">
-                <div class="univ__img drop__img"></div>
-                <div class="univ__content">
+                <div class="univ__img drop__img" data-aos="zoom-in-up" data-aos-duration="1000"></div>
+                <div class="univ__content" data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine">
                     <div class="univ__title-mob">
                         <h1>ДРОПШИППІНГ</h1>
                         <div class="line"></div>
@@ -648,16 +659,13 @@
                     </p>
                     <div class="wishes__contact">
                         <a class="" href="viber:+380731005759">
-                            <img class="icon__one" src="./img/social/social_icons1.png" alt="">
-                            <img class="icon__hov" src="./img/social/social_icons1.1.png" alt="">
+                            <img class="icon__one icon__svg img-svg" src="./img/social/viber.svg" alt="">
                         </a>
                         <a class="" href="https://t.me/Cherry_Cherry30">
-                            <img class="icon__one" src="./img/social/social_icons2.png" alt="">
-                            <img class="icon__hov" src="./img/social/social_icons2.2.png" alt="">
+                            <img class="icon__two icon__svg img-svg" src="./img/social/telegram.svg" alt="">
                         </a>
                         <a class="" href="tel:+380731005759">
-                            <img class="icon__one" src="./img/social/social_icons3.png" alt="">
-                            <img class="icon__hov" src="./img/social/social_icons3.3.png" alt="">
+                            <img class="icon__tree icon__svg img-svg" src="./img/social/phone.svg" alt="">
                         </a>
                     </div>
                     <div class="buttons">
@@ -681,6 +689,12 @@
     </script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 
     <!-- js -->
     

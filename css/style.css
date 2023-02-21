@@ -1993,7 +1993,7 @@ margin-top: 30px;
 
     .contact-form__input_size {
         margin-bottom: 10px;
-        width: auto;
+        width: 198px;
         height: 40px;
     }
 
@@ -2009,3 +2009,29 @@ margin-top: 30px;
 }
 
 /* form jqeryEND */
+
+/* svg */
+.icon__svg {
+    border-radius: 20px;
+    transition: 0.5s;
+    content: "";
+}
+
+.icon__svg:hover {
+    box-shadow: 0px 0px 10px #FFFFFF;
+}
+
+.icon__one path:hover {
+    fill: #7B519D;
+    transition: 0.5s;
+}
+ 
+.icon__two path:hover {
+    fill: #0088CC;
+    transition: 0.5s;
+}
+
+.icon__tree path:hover {
+    fill: #0088CC;
+    transition: 0.5s;
+}
