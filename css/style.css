@@ -84,7 +84,7 @@ li {}
     border: 2px solid white;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     color: white;
     cursor: pointer;
@@ -1474,7 +1474,7 @@ input::placeholder {
 /* footer start*/
 footer {
     width: 100%;
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
 }
 
 .fut__cont {
@@ -1556,6 +1556,11 @@ margin-top: 30px;
     justify-content: space-between;
     max-width: 200px;
     padding-top: 43px;
+}
+
+.copy {
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 @media screen and (max-width: 768px) {
